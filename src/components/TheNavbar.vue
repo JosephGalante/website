@@ -2,10 +2,12 @@
   <header>
     <nav>
       <div>Hello Icon</div>
-      <div>About</div>
-      <div>Experience</div>
-      <div>Projects</div>
-      <div>Contact</div>
+      <div id="hi">
+        <div>About</div>
+        <div>Experience</div>
+        <div>Projects</div>
+        <div>Contact</div>
+      </div>
     </nav>
   </header>
 </template>
@@ -32,9 +34,18 @@ header {
   font-size: 20px;
 }
 
-nav > div {
-  display: inline-block;
+nav {
+  display: flex;
   padding: 10px 20px;
   cursor: pointer;
+  justify-content: space-between;
+}
+
+div {
+  margin: 0px 20px;
+}
+
+#hi {
+  display: flex;
 }
 </style>
