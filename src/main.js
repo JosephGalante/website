@@ -1,7 +1,7 @@
 /**
  * main.js
  *
- * Bootstraps Vuetify and other plugins then mounts the App`
+ * Bootstraps Vuetify and other plugins then mounts the App
  */
 
 // Components
@@ -13,7 +13,11 @@ import { createApp } from 'vue'
 // Plugins
 import { registerPlugins } from '@/plugins'
 
+// Extra
+import router from './router'
+
 const app = createApp(App)
+app.use(router)
 
 registerPlugins(app)
 

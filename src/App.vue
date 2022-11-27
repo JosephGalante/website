@@ -1,29 +1,15 @@
 <template>
   <v-app>
     <v-main>
-      <the-navbar />
-      <HelloWorld />
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "@/components/HelloWorld.vue";
-import TheNavbar from "@/components/TheNavbar.vue";
-
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
-    TheNavbar,
-  },
-};
+  name: 'App',
+}
 </script>
 
-<style scoped>
-nav {
-  background-color: #3f51b5;
-  color: #fff;
-  padding: 1rem;
-}
-</style>
+<style></style>

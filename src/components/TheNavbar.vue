@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <nav>
+  <header bg-yellow>
+    <nav bg-yellow>
       <div>Hello Icon</div>
       <div id="hi">
         <div>About</div>
