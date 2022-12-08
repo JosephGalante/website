@@ -33,6 +33,7 @@ export default {
 <style scoped lang="scss">
 * {
   font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 header {
@@ -47,7 +48,6 @@ header {
 nav {
   display: flex;
   padding: 10px 20px;
-  cursor: pointer;
   justify-content: space-between;
 }
 
@@ -72,5 +72,30 @@ a:hover {
 ol {
   display: flex;
   list-style: none;
+}
+
+li {
+  margin: 0px 20px;
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+}
+
+li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.15s ease-out;
+}
+
+li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 </style>

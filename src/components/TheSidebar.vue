@@ -1,0 +1,65 @@
+<template>
+  <div class="sidebar">
+    <ul>
+      <li>
+        <a href="https://www.github.com/JosephGalante"> <v-icon icon="mdi-github"/></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/jegalante"> <v-icon icon="mdi-linkedin" /></a>
+      </li>
+      <li>
+        <a href="mailto:jegalante@gmail.com?Subject=Hey%20Joe!"> <v-icon icon="mdi-email-outline" /> </a>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'TheSidebar',
+}
+</script>
+
+<style scoped lang="css">
+.sidebar {
+  display: block;
+  position: fixed;
+  bottom: 0px;
+  left: 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul::after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 120px;
+  margin: 0px auto;
+  background-color: #ffb81c;
+}
+
+li {
+  margin-bottom: 25px;
+  transition: transform 250ms;
+}
+
+li:hover {
+  transform: translateY(-4px);
+}
+
+a {
+  text-decoration: none;
+  color: #ffb81c;
+}
+
+.v-icon {
+  font-size: 30px;
+}
+
+.v-icon:hover {
+  color: #ffffff;
+}
+</style>
