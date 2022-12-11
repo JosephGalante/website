@@ -2,13 +2,16 @@
   <div class="sidebar">
     <ul>
       <li>
-        <a href="https://www.github.com/JosephGalante"> <v-icon icon="mdi-github"/></a>
+        <a href="https://www.github.com/JosephGalante"> <v-icon icon="fab fa-github"/></a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/jegalante"> <v-icon icon="mdi-linkedin" /></a>
+        <a href="https://www.linkedin.com/in/jegalante"> <v-icon icon="fa-brands fa-linkedin-in"/></a>
       </li>
       <li>
-        <a href="mailto:jegalante@gmail.com?Subject=Hey%20Joe!"> <v-icon icon="mdi-email-outline" /> </a>
+        <a href="mailto:jegalante@gmail.com?Subject=Hey%20Joe!"> <v-icon icon="fa-regular fa-envelope" /> </a>
+      </li>
+      <li>
+        <a href="https://www.codepen.io/joegalante"> <v-icon icon="fab fa-codepen" /> </a>
       </li>
     </ul>
   </div>
