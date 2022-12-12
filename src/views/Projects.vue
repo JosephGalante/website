@@ -1,22 +1,27 @@
 <template>
-  <TheNavbar />
-  <TheSidebar />
-  <div class="projects">
+  <v-container class="projects">
     <h1>Projects</h1>
-  </div>
+  </v-container>
 </template>
 
 <script>
-import TheNavbar from '@/components/TheNavbar.vue'
-import TheSidebar from '@/components/TheSidebar.vue'
-
 export default {
   name: 'Projects',
-  components: {
-    TheNavbar,
-    TheSidebar,
-  },
 }
 </script>
 
-<style></style>
+<style scoped lang="css">
+.projects {
+  display: flex;
+  color: white;
+  min-width: 70%;
+  max-width: 1600px;
+  min-height: 100%;
+  padding: 0px 150px;
+  justify-content: center;
+}
+
+h1{
+  margin: 100px;
+}
+</style>

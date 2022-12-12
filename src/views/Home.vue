@@ -1,31 +1,26 @@
 <template>
-  <TheNavbar />
-  <TheSidebar />
   <v-container class="home">
-    <v-col>
-      <section class="home-info">
-        <div class="text-h4 mb-10">Hey, pleasure to meet you. My name is</div>
-        <div class="text-h1 mb-10">Joe Galante.</div>
-        <div class="text-h6 mb-10">
-          I'm a Software Engineer with a passion for learning new technologies.
-          Right now, I'm helping ensure autonomous vehicle safety at
-          <a href="https://www.ecr.ai">Edge Case Research</a>. Check out my
-          website to learn more about my work and me.
-        </div>
-      </section>
-    </v-col>
+    <section class="home-info">
+      <div class="text-h4 mb-10 hey">Hey 👋, pleasure to meet you. I'm</div>
+      <div class="text-h1 mb-10">Joe Galante.</div>
+      <div class="text-h6 mb-10">
+        I'm a Software Engineer with a passion for learning new stuff. Right
+        now, I'm helping ensure autonomous vehicle safety at
+        <a href="https://www.ecr.ai">Edge Case Research</a>. Check out my
+        website to learn more about me, or don't. It's your life.
+      </div>
+      <Button :link="'/experience'">Check out my work!</Button>
+    </section>
   </v-container>
 </template>
 
 <script>
-import TheNavbar from '@/components/TheNavbar.vue'
-import TheSidebar from '@/components/TheSidebar.vue'
+import Button from '@/components/Button.vue'
 
 export default {
   name: 'Home',
   components: {
-    TheNavbar,
-    TheSidebar,
+    Button,
   },
 }
 </script>
@@ -46,6 +41,10 @@ export default {
   min-height: 100vh;
   padding: 0px;
   max-width: 1000px;
+}
+
+.hey {
+  color: #ffb81c;
 }
 
 a {

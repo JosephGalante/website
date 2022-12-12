@@ -1,5 +1,7 @@
 <template>
   <v-app>
+    <TheNavbar />
+    <TheSidebar />
     <v-main>
       <router-view></router-view>
     </v-main>
@@ -7,8 +9,15 @@
 </template>
 
 <script>
+import TheNavbar from '@/components/TheNavbar.vue'
+import TheSidebar from '@/components/TheSidebar.vue'
+
 export default {
   name: 'App',
+  components: {
+    TheNavbar,
+    TheSidebar,
+  },
 }
 </script>
 

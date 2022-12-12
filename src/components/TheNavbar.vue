@@ -2,7 +2,7 @@
   <header>
     <nav>
       <div>
-        <router-link :to="'home'">Hello Icon</router-link>
+        <router-link :to="'home'" id="logo">JG</router-link>
       </div>
       <div class="hi">
         <ol>
@@ -18,6 +18,7 @@
           <li>
             <router-link :to="'contact'">Contact</router-link>
           </li>
+        <Button :link="'/home'" style="margin-left: 20px;">Home</Button>
         </ol>
       </div>
     </nav>
@@ -25,24 +26,23 @@
 </template>
 
 <script>
+import Button from '@/components/Button.vue'
+
 export default {
   name: 'TheNavbar',
+  components: {
+    Button
+  }
 }
 </script>
 
 <style scoped lang="scss">
-* {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-}
-
 header {
   padding: 0px 50px;
   width: 100%;
   background-color: #000000;
   color: #ffb81c;
-  line-height: 1.3;
-  font-size: 20px;
+  position: fixed;
 }
 
 nav {
@@ -54,23 +54,26 @@ nav {
 div {
   // margin 0px on top and bottom, 20px on left and right
   margin: 0px 20px;
-}
-
-.hi {
   display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 a {
   text-decoration: none;
-  color: #ffb81c;
+}
+
+.hi a {
+  text-decoration: none;
+  color: #d6d6d6;
 }
 
 a:hover {
-  color: #ffffff;
+  color: #ffb81c;
 }
 
 ol {
-  display: flex;
   list-style: none;
 }
 
@@ -78,7 +81,7 @@ li {
   margin: 0px 20px;
   display: inline-block;
   position: relative;
-  color: #ffffff;
+  color: #ffb81c;
 }
 
 li::after {
@@ -89,7 +92,7 @@ li::after {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ffffff;
+  background-color: #ffb81c;
   transform-origin: bottom right;
   transition: transform 0.15s ease-out;
 }
@@ -97,5 +100,11 @@ li::after {
 li:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+#logo {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ffb81c;
 }
 </style>
