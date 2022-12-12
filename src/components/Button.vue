@@ -10,12 +10,14 @@ export default {
   props: {
     link: {
       type: String,
-      required: true
     }
   },
   methods: {
     goToPage() {
-      this.$router.push(this.link)
+      console.log(this.link);
+      if (this.link !== undefined) {
+        this.$router.push(this.link)
+      }
     }
   }
 }

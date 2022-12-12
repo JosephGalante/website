@@ -18,7 +18,9 @@
           <li>
             <router-link :to="'contact'">Contact</router-link>
           </li>
-        <Button :link="'/home'" style="margin-left: 20px;">Home</Button>
+          <a href="/RESUME-Galante(ECR1).pdf" target="_blank"
+            ><Button style="margin-left: 20px">Resumé</Button></a
+          >
         </ol>
       </div>
     </nav>
@@ -31,8 +33,8 @@ import Button from '@/components/Button.vue'
 export default {
   name: 'TheNavbar',
   components: {
-    Button
-  }
+    Button,
+  },
 }
 </script>
 
