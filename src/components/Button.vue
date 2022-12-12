@@ -14,7 +14,6 @@ export default {
   },
   methods: {
     goToPage() {
-      console.log(this.link);
       if (this.link !== undefined) {
         this.$router.push(this.link)
       }

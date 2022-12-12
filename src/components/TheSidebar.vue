@@ -65,4 +65,10 @@ a {
 .v-icon:hover {
   color: #ffffff;
 }
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
 </style>
