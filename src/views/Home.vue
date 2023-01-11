@@ -10,16 +10,28 @@
       </div>
       <Button :link="'/experience'">Check out my work!</Button>
     </section>
+    <About />
+    <Experience />
+    <Projects />
+    <Contact />
   </v-container>
 </template>
 
 <script>
 import Button from '@/components/Button.vue'
+import About from '@/components/About.vue'
+import Experience from '@/components/Experience.vue'
+import Contact from '@/components/Contact.vue'
+import Projects from '@/components/Projects.vue'
 
 export default {
   name: 'Home',
   components: {
-    Button
+    Button,
+    About,
+    Experience,
+    Contact,
+    Projects,
   },
 }
 </script>

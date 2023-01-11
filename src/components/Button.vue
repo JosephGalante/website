@@ -10,21 +10,21 @@ export default {
   props: {
     link: {
       type: String,
-    }
+    },
   },
   methods: {
     goToPage() {
       if (this.link !== undefined) {
         this.$router.push(this.link)
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style scoped lang="css">
 .v-btn {
-  font-size: 1em !important; 
+  font-size: 1em !important;
   text-transform: none !important;
   padding: 15px 25px 35px 25px !important;
 }

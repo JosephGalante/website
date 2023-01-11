@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format:prettier": "prettier --config .prettierrc --write '**/*.{js,scss,css,vue}'"
   },
   "dependencies": {
     "roboto-fontface": "*",

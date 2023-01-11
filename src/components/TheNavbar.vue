@@ -11,8 +11,8 @@
 
 <script>
 import Button from '@/components/Button.vue'
-import NavItems from '@/components/Navbar/NavItems.vue'
-import PageLogo from '@/components/Navbar/PageLogo.vue'
+import NavItems from '@/components/NavItems.vue'
+import PageLogo from '@/components/PageLogo.vue'
 
 export default {
   name: 'TheNavbar',
