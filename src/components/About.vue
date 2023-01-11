@@ -1,26 +1,34 @@
 <template>
   <v-container class="about pa-0">
     <h1>About Me</h1>
-    <section>
-      <p>
-        I am a recent graduate of the University of Pittsburgh, earning degrees
-        in both Computer Science and Finance. I'm ready to apply my knowledge
-        and skills to make a positive impact in the world. My passion for
-        technology and drive to succeed are matched by my love for adventure and
-        the great outdoors. As an avid rock climber, I am always seeking new
-        challenges and thrills in the natural world.
-      </p>
-      <br />
-      <p>
-        Additionally, my love for music is an integral part of my life. I have
-        been playing guitar and bass for many years, and find great joy in
-        making music. I am currently employed as a software engineer at Edge
-        Case Research, where I am able to continue to learn and grow in my
-        field. My passion for learning and exploring extends beyond my
-        professional life, as I am a dedicated traveler. I recently spent an
-        unforgettable summer backpacking solo through Europe, and am always
-        eager to discover new places and cultures.
-      </p>
+    <section class="d-flex justify-space-between">
+      <div class="mr-8">
+        <p class="mt-3 mb-6">
+          Hey there! My name is Joseph Galante, but you can just call me Joe.
+          I'm a recent graduate from the
+          <text-link url="https://www.pitt.edu">
+            University of Pittsburgh
+          </text-link>
+          with a degree in Computer Science and Finance. My analytical
+          background is paired with my adventurous spirit, as I love to rock
+          climb and explore the great outdoors.
+        </p>
+        <p class="mb-6">
+          I also have a passion for music, and have been playing guitar and bass
+          for many years. Currently, I work as a Software Engineer at
+          <text-link :url="`https://www.ecr.ai`">Edge Case Research</text-link>,
+          and am always looking for new challenges and opportunities to learn
+          and grow.
+        </p>
+
+        <p>
+          I also have a love for travel, as I recently spent a summer
+          backpacking through Europe. So if you're looking for someone who can
+          climb a mountain and play a tune on the summit or navigate through
+          unknown places and make music on the way, I'm your person!
+        </p>
+      </div>
+      <img src="@/assets/headshot_cropped.jpg" alt="headshot" />
     </section>
   </v-container>
 </template>
@@ -32,4 +40,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped lang="css">
+img {
+  width: 50%;
+  height: 50%;
+  border-radius: 3%;
+}
+</style>

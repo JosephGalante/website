@@ -1,5 +1,5 @@
 // Views
-import Home from '@/views/Home.vue'
+import Site from '@/views/Site.vue'
 
 // Vue Router functions
 import { createRouter, createWebHistory } from 'vue-router'
@@ -7,8 +7,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'Site',
+    component: Site,
   },
   {
     path: '/:pathMatch(.*)*',

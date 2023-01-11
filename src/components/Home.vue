@@ -10,33 +10,21 @@
       </div>
       <Button :link="'/experience'">Check out my work!</Button>
     </section>
-    <About />
-    <!-- <Experience />
-    <Projects />
-    <Contact /> -->
   </v-container>
 </template>
 
 <script>
 import Button from '@/components/Button.vue'
-import About from '@/components/About.vue'
-import Experience from '@/components/Experience.vue'
-import Contact from '@/components/Contact.vue'
-import Projects from '@/components/Projects.vue'
 
 export default {
   name: 'Home',
   components: {
     Button,
-    About,
-    Experience,
-    Contact,
-    Projects,
   },
 }
 </script>
 
-<style scoped>
+<style scoped lang="css">
 .home {
   color: white;
   width: 100%;
@@ -60,7 +48,7 @@ export default {
 
 @media screen and (min-width: 768.1px) and (max-width: 1024px) {
   .home {
-    padding: 0px 130px;
+    padding: 0px 110px;
   }
 
   .hey {
@@ -82,7 +70,7 @@ export default {
 
 @media screen and (min-width: 500.1px) and (max-width: 768px) {
   .home {
-    padding: 0px 40px;
+    padding: 0px 30px;
   }
 
   .hey {
@@ -104,7 +92,7 @@ export default {
 
 @media screen and (max-width: 500px) {
   .home {
-    padding: 0px 20px;
+    padding: 0px 15px;
   }
 
   .hey {
