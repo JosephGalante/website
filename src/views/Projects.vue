@@ -21,7 +21,7 @@ export default {
   justify-content: center;
 }
 
-h1{
+h1 {
   margin: 100px;
 }
 </style>
