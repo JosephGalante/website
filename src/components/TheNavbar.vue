@@ -40,7 +40,6 @@ nav {
 }
 
 div {
-  // margin 0px on top and bottom, 20px on left and right
   margin: 0px 20px;
   display: flex;
   justify-content: center;

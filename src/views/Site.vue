@@ -1,9 +1,11 @@
 <template>
-  <Home />
-  <About />
-  <!-- <Experience /> -->
-  <!-- <Projects /> -->
-  <!-- <Contact /> -->
+  <v-container class="home">
+    <Home />
+    <About />
+    <!-- <Experience /> -->
+    <!-- <Projects /> -->
+    <!-- <Contact /> -->
+  </v-container>
 </template>
 
 <script>
@@ -26,5 +28,11 @@ export default {
 </script>
 
 <style scoped lang="css">
-
+.home {
+  color: white;
+  background-color: black;
+  width: 100%;
+  min-height: 100%;
+  padding: 0px 150px;
+}
 </style>
