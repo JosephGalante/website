@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import TheNavbar from '@/components/Navbar/TheNavbar.vue'
+import TheNavbar from '@/components/TheNavbar.vue'
 import TheSidebar from '@/components/TheSidebar.vue'
 
 export default {
@@ -21,9 +21,9 @@ export default {
 }
 </script>
 
-<style scoped lang="css">
+<style lang="css">
 .v-application {
-  background-color: #000000;
-  color: #ffb81c;
+  background-color: #000000 !important;
+  color: #ffb81c !important;
 }
 </style>

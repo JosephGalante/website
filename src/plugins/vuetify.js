@@ -28,7 +28,7 @@ export default createVuetify({
     defaultSet: 'fa',
     aliases,
     sets: {
-      fa
+      fa,
     },
   },
 })

@@ -6,7 +6,7 @@
       <div class="text-h6 mb-10 home-intro">
         I'm a Software Engineer with a passion for learning new stuff. Right
         now, I'm helping ensure autonomous vehicle safety at
-        <a href="https://www.ecr.ai">Edge Case Research</a>.
+        <text-link :url="`https://www.ecr.ai`">Edge Case Research</text-link>.
       </div>
       <Button :link="'/experience'">Check out my work!</Button>
     </section>
@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="css">
 .home {
   color: white;
   width: 100%;
@@ -46,38 +46,9 @@ export default {
   color: #ffb81c;
 }
 
-a {
-  color: #ffb81c;
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ffffff;
-}
-
-a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #ffffff;
-  transform-origin: bottom right;
-  transition: transform 0.15s ease-out;
-}
-
-a:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
 @media screen and (min-width: 768.1px) and (max-width: 1024px) {
   .home {
-    padding: 0px 130px;
+    padding: 0px 110px;
   }
 
   .hey {
@@ -99,7 +70,7 @@ a:hover::after {
 
 @media screen and (min-width: 500.1px) and (max-width: 768px) {
   .home {
-    padding: 0px 40px;
+    padding: 0px 30px;
   }
 
   .hey {
@@ -121,7 +92,7 @@ a:hover::after {
 
 @media screen and (max-width: 500px) {
   .home {
-    padding: 0px 20px;
+    padding: 0px 15px;
   }
 
   .hey {
