@@ -1,13 +1,14 @@
 <template>
   <v-row class="home-info">
-    <div class="text-h4 mb-10 hey">Hey 👋, pleasure to meet you. I'm</div>
-    <div class="text-h1 mb-10">Joe Galante.</div>
-    <div class="text-h6 mb-10 home-intro">
+    <v-col class="text-h4 mb-10 hey">Hey 👋, pleasure to meet you. I'm</v-col>
+    <v-col class="text-h1 mb-10">Joe Galante.</v-col>
+    <v-col class="text-h6 mb-10 home-intro">
       I'm a Software Engineer with a passion for learning new stuff. Right now,
       I'm helping ensure autonomous vehicle safety at
-      <text-link :url="`https://www.ecr.ai`">Edge Case Research</text-link>.
-    </div>
-    <Button :link="'/experience'">Check out my work!</Button>
+      <text-link :url="`https://www.ecr.ai`">Edge Case Research</text-link>
+      .
+    </v-col>
+    <v-col><Button :link="'/experience'">Check out my work!</Button></v-col>
   </v-row>
 </template>
 
@@ -23,13 +24,17 @@ export default {
 </script>
 
 <style scoped lang="css">
+.v-col {
+  flex-grow: 0;
+}
+
 .home-info {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 0px;
+  /* padding: 0px; */
   max-width: 1000px;
 }
 

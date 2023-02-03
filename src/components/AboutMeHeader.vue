@@ -1,13 +1,14 @@
 <template>
-  <v-row class="d-flex align-center poo">
-    <h1>About Me</h1>
+  <v-col class="d-flex align-center flex-grow-0 poo pb-0">
+    <h1 id="about">About Me</h1>
     <v-divider
+      class="ml-6"
       role="presentation"
       :color="'#ffb81c'"
       :thickness="3"
-      :length="'500'"
+      :length="'800'"
     ></v-divider>
-  </v-row>
+  </v-col>
 </template>
 
 <script>

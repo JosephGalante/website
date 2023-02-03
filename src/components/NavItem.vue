@@ -1,6 +1,8 @@
 <template>
   <li>
-    <router-link :to="link">{{ text }}</router-link>
+    <a @click="scrollTo(link)">
+      {{ text }}
+    </a>
   </li>
 </template>
 
@@ -15,6 +17,12 @@ export default {
     link: {
       type: String,
       required: true,
+    },
+  },
+  methods: {
+    scrollTo(itemId) {
+      const elem = document.getElementById(`${itemId}`)
+      elem.scrollIntoView({ behavior: 'smooth' })
     },
   },
 }
@@ -36,6 +44,7 @@ a {
 
 a:hover {
   color: #ffb81c;
+  cursor: pointer;
 }
 
 li {
