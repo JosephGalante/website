@@ -2,7 +2,7 @@
   <v-col class="poo d-flex pt-0">
     <v-col class="pa-0">
       <p class="mt-2 mb-6">
-        Hey there! I'm is Joseph Galante, but you can call me Joe. I'm a
+        Hey there! I'm is Joseph Galante, but you can just call me Joe. I'm a
         recent graduate from the
         <text-link url="https://www.pitt.edu">
           University of Pittsburgh
