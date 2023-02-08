@@ -1,6 +1,6 @@
 <template>
   <v-col class="d-flex align-center flex-grow-0 pb-0">
-    <h1 id="about">About Me</h1>
+    <h1 id="experience" class="mr-3">Experiences</h1>
     <v-divider
       role="presentation"
       :color="'#ffb81c'"
@@ -11,12 +11,8 @@
 
 <script>
 export default {
-  name: 'AboutMeHeader',
+  name: 'ExperienceHeader',
 }
 </script>
 
-<style scoped lang="css">
-h1 {
-  min-width: 150px;
-}
-</style>
+<style scoped lang="css"></style>

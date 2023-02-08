@@ -1,5 +1,5 @@
 <template>
-  <v-col class="poo d-flex pt-0">
+  <v-col class="poo d-flex pt-0 mb-16">
     <v-col class="pa-0">
       <p class="mt-2 mb-6">
         Hey there! I'm is Joseph Galante, but you can just call me Joe. I'm a
@@ -73,7 +73,7 @@
       </div>
     </v-col>
     <v-col class="mt-2 ml-4 pa-0">
-      <img src="@/assets/headshot_cropped.jpg" alt="headshot" />
+      <v-img src="./src/assets/headshot_cropped.jpg" alt="headshot"></v-img>
     </v-col>
   </v-col>
 </template>
@@ -94,8 +94,7 @@ ul {
   list-style: none;
 }
 
-img {
-  height: 40%;
+.v-img {
   border-radius: 3%;
 }
 

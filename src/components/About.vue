@@ -21,7 +21,6 @@ export default {
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
   padding: 0px;
   max-width: 1000px;
 }

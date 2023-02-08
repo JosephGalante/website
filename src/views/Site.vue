@@ -2,7 +2,7 @@
   <v-container class="home">
     <Home />
     <About />
-    <!-- <Experience /> -->
+    <Experience />
     <!-- <Projects /> -->
     <!-- <Contact /> -->
   </v-container>
