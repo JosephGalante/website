@@ -95,7 +95,7 @@ ul {
 }
 
 img {
-  height: 35%;
+  height: 40%;
   border-radius: 3%;
 }
 

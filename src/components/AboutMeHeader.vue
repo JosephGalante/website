@@ -2,11 +2,10 @@
   <v-col class="d-flex align-center flex-grow-0 poo pb-0">
     <h1 id="about">About Me</h1>
     <v-divider
-      class="ml-6"
+      class="poo"
       role="presentation"
       :color="'#ffb81c'"
       :thickness="3"
-      :length="'800'"
     ></v-divider>
   </v-col>
 </template>
