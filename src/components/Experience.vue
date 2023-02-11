@@ -1,5 +1,5 @@
 <template>
-  <v-row class="experience pt-16">
+  <v-row class="experience pt-16 mx-auto">
     <ExperienceHeader />
     <ExperienceContent />
   </v-row>

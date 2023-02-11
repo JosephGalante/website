@@ -1,5 +1,5 @@
 <template>
-  <v-row class="about pa-0 mb-16">
+  <v-row class="about pa-0 mx-auto">
     <AboutMeHeader />
     <AboutMeContent />
   </v-row>

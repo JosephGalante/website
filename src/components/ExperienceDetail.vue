@@ -33,13 +33,10 @@ export default {
   },
   computed: {
     job() {
-      if (this.experience === 'ecr') {
-        return this.jobs.ecr
-      } else if (this.experience === 'mma') {
-        return this.jobs.mma
-      } else if (this.experience === 'pip') {
-        return this.jobs.pip
+      if(!this.jobs[this.experience]){
+        return
       }
+      return this.jobs[this.experience]
     },
   },
 }
