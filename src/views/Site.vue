@@ -4,7 +4,7 @@
     <About />
     <Experience />
     <!-- <Projects /> -->
-    <!-- <Contact /> -->
+    <Contact />
   </v-container>
 </template>
 
@@ -12,8 +12,8 @@
 import Home from '@/components/Home.vue'
 import About from '@/components/About.vue'
 import Experience from '@/components/Experience.vue'
-import Contact from '@/components/Contact.vue'
 import Projects from '@/components/Projects.vue'
+import Contact from '@/components/Contact.vue'
 
 export default {
   name: 'Site',

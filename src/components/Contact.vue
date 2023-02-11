@@ -1,13 +1,52 @@
 <template>
-  <div class="contact">
-    <h1>Contact</h1>
-  </div>
+  <v-row class="contact pt-16 d-flex mx-auto">
+    <v-col class="d-flex align-center">
+      <v-divider
+        role="presentation"
+        :color="'#ffb81c'"
+        :thickness="3"
+      ></v-divider>
+      <h1 class="mx-3 text-no-wrap">What now?</h1>
+      <v-divider
+        role="presentation"
+        :color="'#ffb81c'"
+        :thickness="3"
+      ></v-divider>
+    </v-col>
+    <v-col class="d-flex text-center">
+      <p>
+        Hey there! Even though I'm not on the hunt for anything new right now,
+        feel free to drop me a message. Whether you want to ask something or
+        just say hi, I'll make sure to hit you back as soon as I can.
+      </p>
+    </v-col>
+    <v-col class="d-flex justify-center">
+      <a href="mailto:jegalante@gmail.com?Subject=Hey%20Joe!">
+        <Button>Say Hi</Button>
+      </a>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
+import Button from '@/components/Button.vue'
+
 export default {
   name: 'Contact',
+  components: {
+    Button,
+  },
 }
 </script>
 
-<style></style>
+<style scoped lang="css">
+.contact {
+  flex-direction: column;
+  padding: 0px;
+  max-width: 600px;
+}
+
+a {
+  text-decoration: none;
+}
+</style>
