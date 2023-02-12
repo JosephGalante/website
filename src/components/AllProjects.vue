@@ -1,11 +1,11 @@
 <template>
-  <v-row class="d-flex flex-row">
+  <v-col class="d-flex flex-wrap">
     <ProjectCard
       v-for="project in projects"
       :key="project.id"
       :project="project"
     />
-  </v-row>
+  </v-col>
 </template>
 
 <script>
