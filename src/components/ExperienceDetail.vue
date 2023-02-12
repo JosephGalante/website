@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     job() {
-      if(!this.jobs[this.experience]){
+      if (!this.jobs[this.experience]) {
         return
       }
       return this.jobs[this.experience]

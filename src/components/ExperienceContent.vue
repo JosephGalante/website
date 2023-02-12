@@ -2,12 +2,8 @@
   <v-col class="d-flex content">
     <v-col class="pa-0" cols="4">
       <v-tabs direction="vertical" :color="'#ffb81c'" v-model="tab">
-        <v-tab
-          v-for="(company, index) in allCompaniesWorkedAt"
-          :key="index"
-          :value="companyValue(company)"
-        >
-          {{ company }}
+        <v-tab v-for="(job, key) in jobs" :key="key" :value="key">
+          {{ job.companyName }}
         </v-tab>
       </v-tabs>
     </v-col>
@@ -26,18 +22,9 @@ export default {
   },
   data() {
     return {
+      jobs,
       tab: 'ecr',
     }
-  },
-  computed: {
-    allCompaniesWorkedAt() {
-      return Object.values(jobs).map((job) => job.companyName)
-    },
-  },
-  methods: {
-    companyValue(company) {
-      return Object.keys(jobs).find((key) => jobs[key].companyName === company)
-    },
   },
 }
 </script>
