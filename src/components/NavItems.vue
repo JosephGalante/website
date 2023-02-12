@@ -26,16 +26,16 @@ export default {
     return {
       links: [
         {
-          text: 'Home',
-          link: 'home',
-        },
-        {
           text: 'About',
           link: 'about',
         },
         {
           text: 'Experience',
           link: 'experience',
+        },
+        {
+          text: 'Projects',
+          link: 'projects',
         },
         {
           text: 'Contact',

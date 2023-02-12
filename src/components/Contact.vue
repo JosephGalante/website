@@ -1,5 +1,5 @@
 <template>
-  <v-row class="contact pt-16 d-flex mx-auto">
+  <v-row id="contact" class="contact pt-16 d-flex mx-auto">
     <v-col class="d-flex align-center">
       <v-divider
         role="presentation"
