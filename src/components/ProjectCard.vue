@@ -1,10 +1,13 @@
 <template>
   <v-col cols="4">
     <v-card variant="tonal">
-      <v-card-title class="headline d-flex justify-space-between mt-2 mb-4">
-        <div>
-          <v-icon icon="fa-regular fa-folder" size="x-small"></v-icon>
-          {{ project.title }}
+      <v-card-title class="headline d-flex justify-space-between mt-2 mb-0">
+        <div class="d-flex justify-content-center align-center">
+          <v-icon
+            icon="fa-regular fa-folder"
+            size="large"
+            class="mr-2"
+          ></v-icon>
         </div>
         <div>
           <v-icon class="ml-3" icon="fa-brands fa-github" size="small"></v-icon>
@@ -14,6 +17,10 @@
             size="x-small"
           ></v-icon>
         </div>
+      </v-card-title>
+
+      <v-card-title>
+        {{ project.title }}
       </v-card-title>
 
       <v-card-text>
