@@ -1,5 +1,5 @@
 <template>
-  <v-col class="poo d-flex pt-0 mb-16">
+  <v-col class="d-flex pt-0 mb-16">
     <v-col class="pa-0">
       <p class="mt-2 mb-6">
         Hey there! I'm is Joseph Galante, but you can just call me Joe. I'm a
@@ -22,55 +22,7 @@
       </p>
 
       <p>Here are some technologies in which I consider myself proficient:</p>
-      <div class="fuck justify-content-center">
-        <ul>
-          <li>
-            <v-icon icon="fas fa-angle-right"></v-icon>
-            Go
-          </li>
-
-          <li>
-            <v-icon icon="fas fa-angle-right"></v-icon>
-            JavaScript (ES6+)
-          </li>
-
-          <li>
-            <v-icon icon="fas fa-angle-right"></v-icon>
-            Python
-          </li>
-
-          <li>
-            <v-icon icon="fas fa-angle-right"></v-icon>
-            Java
-          </li>
-          <li>
-            <v-icon icon="fas fa-angle-right"></v-icon>
-            R
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <v-icon icon="fas fa-angle-right"></v-icon>
-            Vue.js
-          </li>
-          <li>
-            <v-icon icon="fas fa-angle-right"></v-icon>
-            Node.js
-          </li>
-          <li>
-            <v-icon icon="fas fa-angle-right"></v-icon>
-            HTML
-          </li>
-          <li>
-            <v-icon icon="fas fa-angle-right"></v-icon>
-            CSS
-          </li>
-          <li>
-            <v-icon icon="fas fa-angle-right"></v-icon>
-            Docker
-          </li>
-        </ul>
-      </div>
+      <AboutMeTechStack />
     </v-col>
     <v-col class="mt-2 ml-4 pa-0">
       <v-img src="./headshot_cropped.jpg" alt="headshot"></v-img>
@@ -79,31 +31,18 @@
 </template>
 
 <script>
+import AboutMeTechStack from '@/components/AboutMeTechStack.vue'
+
 export default {
   name: 'AboutMeContent',
+  components: {
+    AboutMeTechStack,
+  },
 }
 </script>
 
 <style scoped lang="css">
-.poo {
-  width: 100%;
-}
-
-ul {
-  flex: 1;
-  list-style: none;
-}
-
 .v-img {
   border-radius: 3%;
-}
-
-.fuck {
-  display: flex;
-  justify-content: center;
-}
-
-.v-icon {
-  color: #ffb81c;
 }
 </style>

@@ -1,27 +1,30 @@
 <template>
-  <v-container class="projects">
-    <h1>Projects</h1>
-  </v-container>
+  <v-row class="projects pt-16 mx-auto">
+    <ProjectsHeader />
+    <AllProjects />
+  </v-row>
 </template>
 
 <script>
+import AllProjects from '@/components/AllProjects.vue'
+import ProjectsHeader from '@/components/ProjectsHeader.vue'
+
 export default {
   name: 'Projects',
+  components: {
+    AllProjects,
+    ProjectsHeader,
+  },
 }
 </script>
 
 <style scoped lang="css">
 .projects {
   display: flex;
-  color: white;
-  min-width: 70%;
-  max-width: 1600px;
-  min-height: 100%;
-  padding: 0px 150px;
   justify-content: center;
-}
-
-h1 {
-  margin: 100px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  max-width: 1000px;
 }
 </style>

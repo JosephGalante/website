@@ -1,6 +1,10 @@
 <template>
   <v-col class="pt-0" cols="8">
-    <ExperienceTitle :jobTitle="job.title" :companyName="job.companyName" />
+    <ExperienceTitle
+      :jobTitle="job.title"
+      :companyName="job.companyName"
+      :companySite="job.companySite"
+    />
     <h4 class="mb-3">{{ job.duration }}</h4>
     <ul>
       <li v-for="(task, index) in job.tasks" :key="index">
@@ -43,10 +47,6 @@ export default {
 </script>
 
 <style scoped lang="css">
-h3 span {
-  color: #ffb81c;
-}
-
 ul {
   list-style: none;
 }

@@ -3,7 +3,7 @@
     <Home />
     <About />
     <Experience />
-    <!-- <Projects /> -->
+    <Projects />
     <Contact />
   </v-container>
 </template>
@@ -21,8 +21,8 @@ export default {
     Home,
     About,
     Experience,
-    Contact,
     Projects,
+    Contact,
   },
 }
 </script>

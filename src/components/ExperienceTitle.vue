@@ -1,7 +1,10 @@
 <template>
   <h3>
     {{ jobTitle }}
-    <span>@ {{ companyName }}</span>
+    <span>
+      @
+      <text-link :url="companySite">{{ companyName }}</text-link>
+    </span>
   </h3>
 </template>
 
@@ -14,6 +17,10 @@ export default {
       required: true,
     },
     companyName: {
+      type: String,
+      required: true,
+    },
+    companySite: {
       type: String,
       required: true,
     },
