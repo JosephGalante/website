@@ -73,7 +73,7 @@
       </div>
     </v-col>
     <v-col class="mt-2 ml-4 pa-0">
-      <v-img src="./src/assets/headshot_cropped.jpg" alt="headshot"></v-img>
+      <v-img src=".//headshot_cropped.jpg" alt="headshot"></v-img>
     </v-col>
   </v-col>
 </template>
