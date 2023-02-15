@@ -7,7 +7,9 @@
       :text="text"
     ></NavItem>
     <a href="/RESUME-Galante(ECR1).pdf" target="_blank">
-      <Button style="margin-left: 20px">Resumé</Button>
+      <Button style="margin-left: 20px" rel="noopener noreferrer">
+        Resumé
+      </Button>
     </a>
   </ol>
 </template>

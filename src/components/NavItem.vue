@@ -1,8 +1,6 @@
 <template>
-  <li>
-    <a @click="scrollTo(link)">
-      {{ text }}
-    </a>
+  <li @click="scrollTo(link)">
+    {{ text }}
   </li>
 </template>
 
@@ -31,26 +29,16 @@ export default {
 <style scoped>
 li {
   margin: 0px 20px;
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-}
-
-a {
-  text-decoration: none;
   color: #d6d6d6;
-}
-
-a:hover {
-  color: #ffb81c;
-  cursor: pointer;
-}
-
-li {
-  margin: 0px 20px;
-  display: inline-block;
   position: relative;
+}
+
+li:hover {
+  cursor: pointer;
   color: #ffb81c;
 }
 
