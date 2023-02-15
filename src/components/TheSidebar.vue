@@ -2,22 +2,34 @@
   <div class="sidebar">
     <ul>
       <li>
-        <a href="https://www.github.com/JosephGalante">
+        <a
+          href="https://www.github.com/JosephGalante"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <v-icon icon="fab fa-github" />
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/jegalante">
+        <a
+          href="https://www.linkedin.com/in/jegalante"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <v-icon icon="fa-brands fa-linkedin-in" />
         </a>
       </li>
       <li>
-        <a href="mailto:jegalante@gmail.com?Subject=Hey%20Joe!">
+        <a href="mailto:jegalante@gmail.com?Subject=Hey%20Joe!" target="_blank">
           <v-icon icon="fa-regular fa-envelope" />
         </a>
       </li>
       <li>
-        <a href="https://www.codepen.io/joegalante">
+        <a
+          href="https://www.codepen.io/joegalante"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <v-icon icon="fab fa-codepen" />
         </a>
       </li>

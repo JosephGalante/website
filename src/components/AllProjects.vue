@@ -1,5 +1,5 @@
 <template>
-  <v-col class="d-flex flex-wrap">
+  <v-col class="d-flex flex-wrap px-1">
     <ProjectCard
       v-for="project in projects"
       :key="project.id"
