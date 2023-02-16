@@ -17,6 +17,7 @@
 <script>
 import NavItem from '@/components/NavItem.vue'
 import Button from '@/components/Button.vue'
+import { gsap } from 'gsap'
 
 export default {
   name: 'NavItems',
@@ -45,6 +46,16 @@ export default {
         },
       ],
     }
+  },
+  mounted() {
+    const navItems = document.querySelectorAll('li')
+    const navItemsArr = Array.from(navItems)
+    const tl = gsap.timeline({ defaults: { ease: 'power3.inOut' } })
+    tl.fromTo(
+      navItemsArr,
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, duration: 0.5, stagger: 0.1 }
+    )
   },
 }
 </script>
