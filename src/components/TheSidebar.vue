@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <ul>
+    <ul class="sidebar-list">
       <li>
         <a
           href="https://www.github.com/JosephGalante"
@@ -38,8 +38,22 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+
 export default {
   name: 'TheSidebar',
+  mounted() {
+    // have the unordered list all appear at once, wait for after the nav-items have appeared
+    // then animate the unordered list to appear from the bottom
+    const sidebarList = document.querySelector('.sidebar-list')
+    gsap.from(sidebarList, {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: 'power4.out', // wait for the nav-items to appear
+      delay: 0.5,
+    })
+  },
 }
 </script>
 

@@ -1,24 +1,45 @@
 <template>
   <v-row class="home-info mx-auto">
     <v-col class="text-h4 mb-10 hey">Hey 👋, pleasure to meet you. I'm</v-col>
-    <v-col class="text-h1 mb-10">Joe Galante.</v-col>
+    <v-col class="text-h1 mb-10 name">Joe Galante.</v-col>
     <v-col class="text-h6 mb-10 home-intro">
       I'm a Software Engineer with a passion for learning new stuff. Right now,
       I'm helping ensure autonomous vehicle safety at
       <text-link :url="`https://www.ecr.ai`">Edge Case Research</text-link>
       .
     </v-col>
-    <v-col><Button :link="'/experience'">Check out my work!</Button></v-col>
+    <v-col class="checkout">
+      <Button :link="'/experience'">Check out my work!</Button>
+    </v-col>
   </v-row>
 </template>
 
 <script>
+import { gsap } from 'gsap'
 import Button from '@/components/Button.vue'
 
 export default {
   name: 'Home',
   components: {
     Button,
+  },
+  mounted() {
+    const hey = document.querySelector('.hey')
+    const name = document.querySelector('.name')
+    const homeIntro = document.querySelector('.home-intro')
+    const checkout = document.querySelector('.checkout')
+
+    gsap.from([hey, name, homeIntro, checkout], {
+      duration: 0.5,
+      y: +50,
+      opacity: 0,
+      stagger: 0.1,
+      delay: 0.75,
+      ease: 'power2.out',
+    })
+
+    // manually scroll to the top of the page, because the animation scrolls down slightly
+    window.scrollTo(0, 0)
   },
 }
 </script>

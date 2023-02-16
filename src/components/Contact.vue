@@ -1,5 +1,5 @@
 <template>
-  <v-row id="contact" class="contact pt-16 d-flex mx-auto mb-16 pb-16">
+  <v-row id="contact" class="contact pt-16 d-flex mx-auto mb-0 pb-5">
     <v-col class="d-flex align-center">
       <v-divider
         role="presentation"
@@ -42,7 +42,6 @@ export default {
 <style scoped lang="css">
 .contact {
   flex-direction: column;
-  padding: 0px;
   max-width: 600px;
 }
 

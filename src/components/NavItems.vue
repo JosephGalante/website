@@ -6,7 +6,7 @@
       :link="link"
       :text="text"
     ></NavItem>
-    <a href="/RESUME-Galante(ECR1).pdf" target="_blank">
+    <a href="/RESUME-Galante(ECR1).pdf" target="_blank" class="nav-item">
       <Button style="margin-left: 20px" rel="noopener noreferrer">
         Resumé
       </Button>
@@ -48,14 +48,14 @@ export default {
     }
   },
   mounted() {
-    const navItems = document.querySelectorAll('li')
-    const navItemsArr = Array.from(navItems)
-    const tl = gsap.timeline({ defaults: { ease: 'power3.inOut' } })
-    tl.fromTo(
-      navItemsArr,
-      { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 0.5, stagger: 0.1 }
-    )
+    const navItems = document.querySelectorAll('.nav-item')
+    gsap.from(navItems, {
+      duration: 1,
+      y: -50,
+      opacity: 0,
+      stagger: 0.1,
+      ease: 'power4.out',
+    })
   },
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <li @click="scrollTo(link)">
+  <li class="nav-item" @click="scrollTo(link)">
     {{ text }}
   </li>
 </template>
