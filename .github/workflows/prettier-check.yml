@@ -1,0 +1,23 @@
+name: Prettier Check
+on:
+  push:
+    branches: [main] # Change this to match your repository's main branch
+  pull_request:
+
+jobs:
+  prettier-check:
+    name: Check Code Formatting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install Prettier
+        run: npm install --save-dev --save-exact prettier
+      - name: Check Code Formatting
+        run: npx prettier --check "**/*.{js,scss,css,vue}" # Change this to match the files you want to check
+      - name: Fail if code is not formatted
+        run: |
+          if [ $? -ne 0 ]; then
+            echo "Code is not formatted. Please run 'task format' from the root directory to format your code."
+            exit 1
+          fi
