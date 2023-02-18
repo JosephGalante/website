@@ -2,7 +2,7 @@
   <v-container class="home">
     <Home class="homeComponent mb-3" />
     <About class="aboutComponent" />
-    <Experience class="experienceComponent" />
+    <!-- <Experience class="experienceComponent" /> -->
     <Projects class="projectsComponent" />
     <Contact class="contactComponent" />
     <!-- <Footer /> -->
@@ -108,5 +108,12 @@ export default {
   width: 100%;
   min-height: 100%;
   padding: 0px 150px;
+}
+
+/* when the screen width is smaller than 600px, I don't want any padding on the .home */
+@media screen and (max-width: 600px) {
+  .home {
+    padding: 0px 15px;
+  }
 }
 </style>

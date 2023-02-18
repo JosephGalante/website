@@ -24,7 +24,7 @@
       <p>Here are some technologies in which I consider myself proficient:</p>
       <AboutMeTechStack />
     </v-col>
-    <v-col class="mt-2 ml-4 pa-0 fixed">
+    <v-col class="mt-2 mx-auto pa-0 fixed headshot">
       <v-img
         src="./headshot_cropped.jpg"
         alt="Joe Galante profile picture"
@@ -85,5 +85,18 @@ function mouseLeave() {
 <style scoped lang="css">
 .v-img {
   border-radius: 3%;
+}
+
+/* Right now, the two nested v-cols are side by side. However, when the screen width
+is less than 600px, I want the nested v-cols to be viewed one on top of the other */
+@media screen and (max-width: 600px) {
+  .v-col {
+    flex-direction: column;
+  }
+
+  /* Give the .headshot a margin top of 30px */
+  .headshot {
+    margin-top: 30px !important;
+  }
 }
 </style>

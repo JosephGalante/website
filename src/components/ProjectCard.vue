@@ -125,4 +125,9 @@ a {
   height: 50px;
   background-color: #1e1e1e;
 }
+
+/* when I hover over a v-card, make the bottom 40px of the v-card that it is inside of, have a background color of #1e1e1e */
+.v-card:hover .skills {
+  background-color: #1e1e1e;
+}
 </style>
