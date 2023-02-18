@@ -8,6 +8,7 @@
 <script>
 import ExperienceHeader from '@/components/ExperienceHeader.vue'
 import ExperienceContent from '@/components/ExperienceContent.vue'
+import { gsap } from 'gsap'
 
 export default {
   name: 'Experience',
@@ -15,6 +16,12 @@ export default {
     ExperienceHeader,
     ExperienceContent,
   },
+  mounted() {
+    gsap.registerPlugin(ScrollTrigger)
+
+    // use gsap to reveal this component when it is scrolled into view
+
+  }
 }
 </script>
 
