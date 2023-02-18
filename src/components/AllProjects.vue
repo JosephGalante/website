@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { projects } from '../assets/projects.js'
+        import { projects } from '../assets/projects.js'
 import ProjectCard from '@/components/ProjectCard.vue'
 
 export default {
