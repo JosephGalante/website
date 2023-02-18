@@ -1,7 +1,7 @@
 name: Prettier Check
 on:
   push:
-    branches: [main] # Change this to match your repository's main branch
+    branches: [master]
   pull_request:
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
       - name: Install Prettier
         run: npm install --save-dev --save-exact prettier
       - name: Check Code Formatting
-        run: npx prettier --check "**/*.{js,scss,css,vue}" # Change this to match the files you want to check
+        run: npx prettier --check "**/*.{js,scss,css,vue}"
       - name: Fail if code is not formatted
         run: |
           if [ $? -ne 0 ]; then
