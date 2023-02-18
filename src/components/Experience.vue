@@ -16,12 +16,6 @@ export default {
     ExperienceHeader,
     ExperienceContent,
   },
-  mounted() {
-    gsap.registerPlugin(ScrollTrigger)
-
-    // use gsap to reveal this component when it is scrolled into view
-
-  }
 }
 </script>
 

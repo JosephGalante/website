@@ -1,5 +1,8 @@
 <template>
-  <v-row id="contact" class="contact pt-16 d-flex mx-auto mb-0 pb-5">
+  <v-row
+    id="contact"
+    class="contact pt-12 mt-12 mb-16 d-flex mx-auto mb-0 pb-5"
+  >
     <v-col class="d-flex align-center">
       <v-divider
         role="presentation"
@@ -15,12 +18,12 @@
     </v-col>
     <v-col class="d-flex text-center">
       <p>
-        Hey there. Even though I'm not on the hunt for anything new right now,
+        Hey there. Even though I'm not in the hunt for anything new right now,
         feel free to drop me a message. Whether you want to ask something or say
         hi, just reach out.
       </p>
     </v-col>
-    <v-col class="d-flex justify-center">
+    <v-col class="d-flex justify-center mt-3">
       <a href="mailto:jegalante@gmail.com?Subject=Hey%20Joe!">
         <Button>Say Hi</Button>
       </a>

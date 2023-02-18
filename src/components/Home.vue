@@ -23,24 +23,6 @@ export default {
   components: {
     Button,
   },
-  mounted() {
-    const hey = document.querySelector('.hey')
-    const name = document.querySelector('.name')
-    const homeIntro = document.querySelector('.home-intro')
-    const checkout = document.querySelector('.checkout')
-
-    gsap.from([hey, name, homeIntro, checkout], {
-      duration: 0.5,
-      y: +50,
-      opacity: 0,
-      stagger: 0.1,
-      delay: 0.75,
-      ease: 'power2.out',
-    })
-
-    // manually scroll to the top of the page, because the animation scrolls down slightly
-    window.scrollTo(0, 0)
-  },
 }
 </script>
 

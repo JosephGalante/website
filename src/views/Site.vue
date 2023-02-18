@@ -31,6 +31,72 @@ export default {
     Footer,
   },
   mounted() {
+    // use gsap to reveal these individual components when I scroll to them
+    // scroll to the top of the page
+    window.scrollTo(0, 0)
+
+    gsap.registerPlugin(ScrollTrigger)
+
+    gsap.from('.homeComponent', {
+      scrollTrigger: {
+        trigger: '.homeComponent',
+        start: 'top 80%',
+        end: 'bottom 80%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      duration: 2,
+      y: 100,
+    })
+
+    gsap.from('.aboutComponent', {
+      scrollTrigger: {
+        trigger: '.aboutComponent',
+        start: 'top 70%',
+        end: 'bottom 80%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      duration: 2,
+      y: 100,
+    })
+
+    gsap.from('.experienceComponent', {
+      scrollTrigger: {
+        trigger: '.experienceComponent',
+        start: 'top 70%',
+        end: 'bottom 80%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      duration: 2,
+      y: 100,
+    })
+
+    gsap.from('.projectsComponent', {
+      scrollTrigger: {
+        trigger: '.projectsComponent',
+        start: 'top 70%',
+        end: 'bottom 80%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      duration: 1,
+      y: 100,
+    })
+
+    gsap.from('.contactComponent', {
+      scrollTrigger: {
+        trigger: '.contactComponent',
+        start: 'top 70%',
+        end: 'bottom 80%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      duration: 1,
+      y: 100,
+    })
+    window.scrollTo(0, 0)
   },
 }
 </script>

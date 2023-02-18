@@ -33,4 +33,8 @@ export default {
 .content {
   min-height: 330px;
 }
+
+.v-tab:hover {
+  background-color: rgb(15, 15, 15) !important;
+}
 </style>

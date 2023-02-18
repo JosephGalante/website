@@ -9,6 +9,7 @@
     "format:prettier": "prettier --config .prettierrc --write '**/*.{js,scss,css,vue}'"
   },
   "dependencies": {
+    "@vueuse/core": "^9.12.0",
     "gsap": "^3.11.4",
     "roboto-fontface": "*",
     "sass": "^1.56.1",

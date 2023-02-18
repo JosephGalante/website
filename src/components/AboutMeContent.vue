@@ -24,20 +24,61 @@
       <p>Here are some technologies in which I consider myself proficient:</p>
       <AboutMeTechStack />
     </v-col>
-    <v-col class="mt-2 ml-4 pa-0">
-      <v-img src="./headshot_cropped.jpg" alt="headshot"></v-img>
+    <v-col class="mt-2 ml-4 pa-0 fixed">
+      <v-img
+        src="./headshot_cropped.jpg"
+        alt="Joe Galante profile picture"
+        ref="target"
+        :style="{
+          transform: imgTransform,
+          transition: 'transform 0.25s ease-out',
+        }"
+        @mouseover="mouseOver"
+        @mouseleave="mouseLeave"
+        :gradient="gradient"
+      ></v-img>
     </v-col>
   </v-col>
 </template>
 
-<script>
-import AboutMeTechStack from '@/components/AboutMeTechStack.vue'
+<script setup>
+import { ref, computed, defineAsyncComponent } from 'vue'
+import { useMouseInElement } from '@vueuse/core'
 
-export default {
-  name: 'AboutMeContent',
-  components: {
-    AboutMeTechStack,
-  },
+const AboutMeTechStack = defineAsyncComponent(() =>
+  import('@/components/AboutMeTechStack.vue')
+)
+
+const target = ref(null)
+const { elementX, elementY, isOutside, elementHeight, elementWidth } =
+  useMouseInElement(target)
+
+const imgTransform = computed(() => {
+  const MAX_ROTATION = 7
+  const rX = (
+    MAX_ROTATION / 2 -
+    (elementY.value / elementHeight.value) * MAX_ROTATION
+  ).toFixed(2)
+
+  const rY = (
+    (elementX.value / elementWidth.value) * MAX_ROTATION -
+    MAX_ROTATION / 2
+  ).toFixed(2)
+  return isOutside.value
+    ? ''
+    : `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`
+})
+
+const gradient = ref(
+  'to top, rgba(255, 187, 28, 0.25), rgba(255, 187, 28, 0.25)'
+)
+
+function mouseOver() {
+  gradient.value = ''
+}
+
+function mouseLeave() {
+  gradient.value = 'to top, rgba(255, 187, 28, 0.25), rgba(255, 187, 28, 0.25)'
 }
 </script>
 
