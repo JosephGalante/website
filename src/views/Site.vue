@@ -45,7 +45,7 @@ export default {
         toggleActions: 'play none none none',
       },
       opacity: 0,
-      duration: 2,
+      duration: 1,
       y: 100,
     })
 
