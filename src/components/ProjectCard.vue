@@ -1,40 +1,10 @@
 <template>
-  <v-col cols="4" class="pa-2">
+  <v-col :cols="cardSize" class="pa-2">
     <v-card variant="tonal">
-      <v-card-title class="headline d-flex justify-space-between mt-2 mb-0">
-        <div class="d-flex justify-content-center align-center">
-          <v-icon
-            icon="fa-regular fa-folder"
-            size="large"
-            class="mr-2"
-            color="#ffb81c"
-          />
-        </div>
-        <div>
-          <a
-            href="https://github.com/JosephGalante/FindACoach"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <v-icon
-              class="icon-link ml-3"
-              icon="fa-brands fa-github"
-              size="small"
-            />
-          </a>
-          <a
-            href="https://findacoach-ebc23.web.app/coaches"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <v-icon
-              class="icon-link ml-3"
-              icon="fas fa-arrow-up-right-from-square"
-              size="x-small"
-            />
-          </a>
-        </div>
-      </v-card-title>
+      <ProjectCardHeader
+        :githubLink="project.githubLink"
+        :liveLink="project.liveLink"
+      />
 
       <v-card-title class="card-title-text">
         {{ project.title }}
@@ -58,17 +28,24 @@
 </template>
 
 <script>
+import ProjectCardHeader from '@/components/ProjectCardHeader.vue'
 import ProjectCardFooter from '@/components/ProjectCardFooter.vue'
 
 export default {
   name: 'ProjectCard',
   components: {
+    ProjectCardHeader,
     ProjectCardFooter,
   },
   props: {
     project: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    cardSize() {
+      return window.innerWidth <= 600 ? 12 : 4
     },
   },
 }
@@ -107,16 +84,6 @@ mouse from the v-card, return the v-card back down to its original position */
   color: orange;
 }
 
-/* when I hover over only the github icon, make the github icon the only thing thats colored orange on this component */
-.icon-link:hover {
-  color: orange;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
 /* I want this div to take up the bottom 40px of the v-card that it is inside of */
 .skills {
   position: absolute;
@@ -129,5 +96,17 @@ a {
 /* when I hover over a v-card, make the bottom 40px of the v-card that it is inside of, have a background color of #1e1e1e */
 .v-card:hover .skills {
   background-color: #1e1e1e;
+}
+
+@media screen and (max-width: 600px) {
+  .v-col {
+    width: 100%;
+    /* flex shrink the height */
+    flex-shrink: 1;
+  }
+
+  .v-card {
+    height: 300px;
+  }
 }
 </style>

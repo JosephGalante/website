@@ -1,5 +1,5 @@
 <template>
-  <v-col class="pt-0" cols="8">
+  <v-col class="pt-0 experience-detail" :cols="detailWidth">
     <ExperienceTitle
       :jobTitle="job.title"
       :companyName="job.companyName"
@@ -42,6 +42,9 @@ export default {
       }
       return this.jobs[this.experience]
     },
+    detailWidth() {
+      return window.innerWidth < 600 ? '12' : '8'
+    },
   },
 }
 </script>
@@ -53,5 +56,13 @@ ul {
 
 .v-icon {
   color: #ffb81c;
+}
+
+/* when the screen width is 600px or less, give a margin-bottom of 24px */
+@media screen and (max-width: 600px) {
+  .experience-detail {
+    margin-bottom: 24px !important;
+    min-height: 800px;
+  }
 }
 </style>

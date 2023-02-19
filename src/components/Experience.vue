@@ -1,5 +1,10 @@
 <template>
-  <v-row class="experience pt-16 mx-auto">
+  <v-row
+    class="experience d-flex flex-column justify-content-center py-16 mb-16 mx-auto"
+    :class="{
+      'py-16 mb-16': isMobile,
+    }"
+  >
     <ExperienceHeader />
     <ExperienceContent />
   </v-row>
@@ -8,7 +13,6 @@
 <script>
 import ExperienceHeader from '@/components/ExperienceHeader.vue'
 import ExperienceContent from '@/components/ExperienceContent.vue'
-import { gsap } from 'gsap'
 
 export default {
   name: 'Experience',
@@ -16,16 +20,23 @@ export default {
     ExperienceHeader,
     ExperienceContent,
   },
+  computed: {
+    isMobile() {
+      return window.innerWidth < 600
+    },
+  },
 }
 </script>
 
 <style scoped lang="css">
 .experience {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
   max-width: 1000px;
+}
+
+@media screen and (max-width: 600px) {
+  .experience {
+    /* min-height: 600px; */
+  }
 }
 </style>

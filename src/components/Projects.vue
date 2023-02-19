@@ -1,5 +1,5 @@
 <template>
-  <v-row class="projects pt-16 mx-auto">
+  <v-row class="projects d-flex justify-content-center pt-16 mx-auto">
     <ProjectsHeader />
     <AllProjects />
   </v-row>
@@ -20,8 +20,6 @@ export default {
 
 <style scoped lang="css">
 .projects {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;

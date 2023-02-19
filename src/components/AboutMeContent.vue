@@ -33,8 +33,8 @@
           transform: imgTransform,
           transition: 'transform 0.25s ease-out',
         }"
-        @mouseover="mouseOver"
-        @mouseleave="mouseLeave"
+        @mouseover.native="mouseOver"
+        @mouseleave.native="mouseLeave"
         :gradient="gradient"
       ></v-img>
     </v-col>

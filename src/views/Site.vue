@@ -2,7 +2,7 @@
   <v-container class="home">
     <Home class="homeComponent mb-3" />
     <About class="aboutComponent" />
-    <!-- <Experience class="experienceComponent" /> -->
+    <Experience class="experienceComponent" />
     <Projects class="projectsComponent" />
     <Contact class="contactComponent" />
     <!-- <Footer /> -->
