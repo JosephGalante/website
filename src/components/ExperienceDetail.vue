@@ -62,7 +62,6 @@ ul {
 @media screen and (max-width: 600px) {
   .experience-detail {
     margin-bottom: 24px !important;
-    min-height: 800px;
   }
 }
 </style>

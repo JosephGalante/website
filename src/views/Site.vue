@@ -3,6 +3,7 @@
     <Home class="homeComponent mb-3" />
     <About class="aboutComponent" />
     <Experience class="experienceComponent" />
+    <ExperienceContent class="experienceComponent" />
     <Projects class="projectsComponent" />
     <Contact class="contactComponent" />
     <!-- <Footer /> -->
@@ -16,6 +17,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Home from '@/components/Home.vue'
 import About from '@/components/About.vue'
 import Experience from '@/components/Experience.vue'
+import ExperienceContent from '@/components/ExperienceContent.vue'
 import Projects from '@/components/Projects.vue'
 import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
@@ -26,6 +28,7 @@ export default {
     Home,
     About,
     Experience,
+    ExperienceContent,
     Projects,
     Contact,
     Footer,
