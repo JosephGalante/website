@@ -1,5 +1,5 @@
 <template>
-  <v-row class="experience d-flex flex-column justify-content-center mx-auto">
+  <v-row class="experience d-flex flex-column justify-center mx-auto">
     <ExperienceHeader />
   </v-row>
 </template>

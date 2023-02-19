@@ -1,5 +1,5 @@
 <template>
-  <v-row class="projects d-flex justify-content-center pt-16 mx-auto">
+  <v-row class="projects d-flex justify-center pt-16 mx-auto">
     <ProjectsHeader />
     <AllProjects />
   </v-row>

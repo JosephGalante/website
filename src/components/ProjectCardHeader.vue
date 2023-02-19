@@ -1,6 +1,6 @@
 <template>
   <v-card-title class="headline d-flex justify-space-between mt-2 mb-0">
-    <div class="d-flex justify-content-center align-center">
+    <div class="d-flex justify-center align-center">
       <v-icon
         icon="fa-regular fa-folder"
         size="large"

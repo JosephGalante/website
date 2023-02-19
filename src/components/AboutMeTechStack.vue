@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-center">
     <ul>
       <li>
         <v-icon icon="fas fa-angle-right"></v-icon>

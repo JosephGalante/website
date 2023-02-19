@@ -1,5 +1,5 @@
 <template>
-  <v-row class="d-flex experience-content justify-content-center mx-auto">
+  <v-row class="d-flex experience-content justify-center mx-auto">
     <v-col class="pa-0 tabs-stuff" :cols="experienceSize">
       <v-tabs
         :direction="tabDirection"
@@ -49,3 +49,10 @@ export default {
   },
 }
 </script>
+
+<style scoped lang="css">
+.experience-content {
+  align-items: flex-start;
+  max-width: 1000px;
+}
+</style>
