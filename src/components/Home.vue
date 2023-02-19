@@ -11,11 +11,13 @@
     <v-col class="checkout">
       <Button :link="'/experience'">Check out my work!</Button>
     </v-col>
+    <v-col class="d-flex justify-center align-center">
+      <v-icon icon="fas fa-angles-down" size="x-large"></v-icon>
+    </v-col>
   </v-row>
 </template>
 
 <script>
-import { gsap } from 'gsap'
 import Button from '@/components/Button.vue'
 
 export default {
@@ -37,7 +39,6 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
-  /* padding: 0px; */
   max-width: 1000px;
 }
 
