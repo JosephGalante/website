@@ -111,7 +111,7 @@ export default {
         gsap.from(`.project-card-${project.id}`, {
           scrollTrigger: {
             trigger: `.project-card-${project.id}`,
-            start: 'top 40%',
+            start: 'top 80%',
             end: 'bottom 80%',
             toggleActions: 'play none none none',
           },

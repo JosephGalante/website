@@ -17,6 +17,7 @@
           class="animated-icon"
           icon="fas fa-angles-down"
           size="x-large"
+          @click="scrollDown"
         ></v-icon>
       </div>
     </v-col>
@@ -33,8 +34,15 @@ export default {
   components: {
     Button,
   },
+  methods: {
+    scrollDown() {
+      const nextSection = document.querySelector('.about')
+      const y = nextSection.getBoundingClientRect().top - 100
+      window.scrollTo({ top: y, behavior: 'smooth' })
+    },
+  },
   mounted() {
-    // make the .scroll-icon vanish using gsap's scrolltrigger when I scroll down a little bit
+    // make the .scroll-icon vanish using gsap's scrolltrigger when I scroll down a little bit, and be sure to reappear it when I scroll back up
     gsap.registerPlugin(ScrollTrigger)
 
     gsap.to('.scroll-icon', {
@@ -42,10 +50,11 @@ export default {
         trigger: '.scroll-icon',
         start: 'top 80%',
         end: 'bottom 80%',
-        toggleActions: 'play none none none',
+        toggleActions: 'play none none reset',
       },
       opacity: 0,
       duration: 1,
+      y: 100,
     })
   },
 }
