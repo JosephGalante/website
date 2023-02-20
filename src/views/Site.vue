@@ -13,6 +13,7 @@
 <script>
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { projects } from '../assets/projects.js'
 
 import Home from '@/components/Home.vue'
 import About from '@/components/About.vue'
@@ -24,6 +25,11 @@ import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'Site',
+  data() {
+    return {
+      projects,
+    }
+  },
   components: {
     Home,
     About,
@@ -76,17 +82,56 @@ export default {
       y: 100,
     })
 
-    gsap.from('.projectsComponent', {
-      scrollTrigger: {
-        trigger: '.projectsComponent',
-        start: 'top 70%',
-        end: 'bottom 80%',
-        toggleActions: 'play none none none',
-      },
-      opacity: 0,
-      duration: 1,
-      y: 100,
-    })
+    if (window.innerWidth > 600) {
+      gsap.from('.projectsComponent', {
+        scrollTrigger: {
+          trigger: '.projectsComponent',
+          start: 'top 70%',
+          end: 'bottom 80%',
+          toggleActions: 'play none none none',
+        },
+        opacity: 0,
+        duration: 2,
+        y: 100,
+      })
+    } else {
+      // load the project-card components one after another, not all at the same time
+      // gsap.from('.project-card', {
+      //   scrollTrigger: {
+      //     trigger: '.project-card',
+      //     start: 'top 70%',
+      //     end: 'bottom 80%',
+      //     toggleActions: 'play none none none',
+      //   },
+      //   opacity: 0,
+      //   duration: 1,
+      //   y: 100,
+      // })
+      for (const project of this.projects) {
+        gsap.from(`.project-card-${project.id}`, {
+          scrollTrigger: {
+            trigger: `.project-card-${project.id}`,
+            start: 'top 40%',
+            end: 'bottom 80%',
+            toggleActions: 'play none none none',
+          },
+          opacity: 0,
+          duration: 1,
+          y: 100,
+        })
+      }
+    }
+    // gsap.from('.projectsComponent', {
+    //   scrollTrigger: {
+    //     trigger: '.projectsComponent',
+    //     start: 'top 70%',
+    //     end: 'bottom 80%',
+    //     toggleActions: 'play none none none',
+    //   },
+    //   opacity: 0,
+    //   duration: 1,
+    //   y: 100,
+    // })
 
     gsap.from('.contactComponent', {
       scrollTrigger: {

@@ -1,5 +1,5 @@
 <template>
-  <v-col :cols="cardSize" class="pa-2">
+  <v-col :cols="cardSize" class="pa-2" :class="`project-card-${project.id}`">
     <v-card variant="tonal">
       <ProjectCardHeader
         :githubLink="project.githubLink"

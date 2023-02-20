@@ -30,6 +30,6 @@ export default {
 }
 
 .v-btn:hover {
-  background-color: rgba(255, 184, 28, 0.2);
+  background-color: rgba(255, 184, 28, 0.15);
 }
 </style>
