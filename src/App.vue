@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <TheNavbar v-if="!isMobile"/>
-    <TheNavbarMobile v-else/>
+    <TheNavbar v-if="!isMobile" />
+    <TheNavbarMobile v-else />
     <TheSidebar />
     <v-main>
       <router-view></router-view>
@@ -24,8 +24,8 @@ export default {
   computed: {
     isMobile() {
       return window.innerWidth < 600
-    }
-  }
+    },
+  },
 }
 </script>
 
