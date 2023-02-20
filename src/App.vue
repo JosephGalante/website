@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <TheNavbar />
+    <TheNavbar v-if="!isMobile"/>
+    <TheNavbarMobile v-else/>
     <TheSidebar />
     <v-main>
       <router-view></router-view>
@@ -10,14 +11,21 @@
 
 <script>
 import TheNavbar from '@/components/TheNavbar.vue'
+import TheNavbarMobile from '@/components/TheNavbarMobile.vue'
 import TheSidebar from '@/components/TheSidebar.vue'
 
 export default {
   name: 'App',
   components: {
     TheNavbar,
+    TheNavbarMobile,
     TheSidebar,
   },
+  computed: {
+    isMobile() {
+      return window.innerWidth < 600
+    }
+  }
 }
 </script>
 
