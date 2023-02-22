@@ -1,12 +1,21 @@
 <template>
   <div>
-    <router-link :to="'home'" id="logo">JG</router-link>
+    <a @click="refreshPage" id="logo">JG</a>
   </div>
 </template>
 
 <script>
 export default {
   name: 'PageLogo',
+  methods: {
+    refreshPage() {
+      // refresh the page
+      window.location.reload()
+
+      // scroll to top of page
+      window.scrollTo(0, 0)
+    },
+  },
 }
 </script>
 
@@ -16,6 +25,10 @@ a {
   font-size: 3em;
   font-weight: bold;
   color: #ffb81c;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768.1px) and (max-width: 1024px) {
