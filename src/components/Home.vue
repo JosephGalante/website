@@ -1,5 +1,8 @@
 <template>
-  <v-row class="home-info d-flex mx-auto align-center">
+  <v-row
+    class="home-info d-flex mx-auto align-center"
+    :class="contentClass"
+  >
     <v-col>
       <div class="text-h4 mb-10 hey">Hey 👋, pleasure to meet you. I'm</div>
       <div class="text-h1 mb-10">Joe Galante.</div>
@@ -41,6 +44,14 @@ export default {
       window.scrollTo({ top: y, behavior: 'smooth' })
     },
   },
+  computed: {
+    isMobile() {
+      return window.innerWidth < 600
+    },
+    contentClass() {
+      return this.isMobile ? 'home-info-mobile' : 'home-info-desktop'
+    },
+  },
   mounted() {
     // make the .scroll-icon vanish using gsap's scrolltrigger when I scroll down a little bit, and be sure to reappear it when I scroll back up
     gsap.registerPlugin(ScrollTrigger)
@@ -62,8 +73,15 @@ export default {
 
 <style scoped lang="css">
 .home-info {
-  min-height: 100vh;
   max-width: 1000px;
+}
+
+.home-info-mobile {
+  min-height: 80vh;
+}
+
+.home-info-desktop {
+  min-height: 100vh;
 }
 
 .hey {

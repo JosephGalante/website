@@ -1,22 +1,26 @@
 <template>
   <div>
     <v-app-bar color="primary" prominent>
-      <transition name="spin">
+      <!-- <transition name="spin"> -->
+      <template v-slot:append>
         <v-app-bar-nav-icon
           ref="hamburgerIcon"
           variant="text"
           @mousedown="toggleClick"
           :class="{ 'is-open': isClicked, 'is-closed': !isClicked }"
         ></v-app-bar-nav-icon>
-      </transition>
+      </template>
+      <!-- </transition> -->
     </v-app-bar>
     <v-navigation-drawer
       app
       flat
       v-model="isClicked"
-      location="left"
+      location="right"
       style="height: 100%"
       color="#111111"
+      ref="navbar"
+      class="navbar hidden"
     >
       <v-list>
         <v-list-item class="ml-2" v-for="item in links" :key="item.link">
@@ -72,13 +76,14 @@ export default {
       elem.scrollIntoView({ behavior: 'smooth' })
       this.isClicked = false
     },
+    
   },
 }
 </script>
 
 <style scoped lang="css">
 .spin-enter-active {
-  animation: spin 0.1s;
+  animation: spin 0..7s;
 }
 
 .spin-enter {
@@ -104,11 +109,11 @@ export default {
 }
 
 .is-open {
-  animation: spin-faster 0.5s;
+  animation: spin-faster 0.3s;
 }
 
 .is-closed {
-  animation: spin-2 1s;
+  animation: spin-2 .7s;
 }
 
 @keyframes spin-2 {
