@@ -1,8 +1,5 @@
 <template>
-  <v-row
-    class="home-info d-flex mx-auto align-center"
-    :class="contentClass"
-  >
+  <v-row class="home-info d-flex mx-auto align-center" :class="contentClass">
     <v-col>
       <div class="text-h4 mb-10 hey">Hey 👋, pleasure to meet you. I'm</div>
       <div class="text-h1 mb-10">Joe Galante.</div>

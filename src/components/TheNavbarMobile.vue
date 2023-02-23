@@ -76,14 +76,13 @@ export default {
       elem.scrollIntoView({ behavior: 'smooth' })
       this.isClicked = false
     },
-    
   },
 }
 </script>
 
 <style scoped lang="css">
 .spin-enter-active {
-  animation: spin 0..7s;
+  animation: spin 0.7s;
 }
 
 .spin-enter {
@@ -113,7 +112,7 @@ export default {
 }
 
 .is-closed {
-  animation: spin-2 .7s;
+  animation: spin-2 0.7s;
 }
 
 @keyframes spin-2 {
