@@ -86,7 +86,7 @@ export default {
       elem.scrollIntoView({ behavior: 'smooth' })
       this.isClicked = false
     },
-        handleScroll() {
+    handleScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       if (scrollTop > this.lastScrollTop) {
         this.navbarTop = '-80px'
