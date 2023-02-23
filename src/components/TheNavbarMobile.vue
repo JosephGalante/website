@@ -45,8 +45,6 @@
 <script>
 import Button from '@/components/Button.vue'
 import PageLogo from '@/components/PageLogo.vue'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export default {
   name: 'TheNavbarMobile',
@@ -88,15 +86,7 @@ export default {
       elem.scrollIntoView({ behavior: 'smooth' })
       this.isClicked = false
     },
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  beforeUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
-  methods: {
-    handleScroll() {
+        handleScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       if (scrollTop > this.lastScrollTop) {
         this.navbarTop = '-80px'
@@ -105,6 +95,12 @@ export default {
       }
       this.lastScrollTop = scrollTop
     },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
   },
 }
 </script>
