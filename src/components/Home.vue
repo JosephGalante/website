@@ -75,6 +75,7 @@ export default {
 
 .home-info-mobile {
   min-height: 85vh;
+  margin-bottom: 50px;
 }
 
 .home-info-desktop {
