@@ -1,7 +1,15 @@
 <template>
   <div>
-    <v-app-bar color="primary" prominent>
+    <v-app-bar
+      color="primary"
+      prominent
+      id="navbar"
+      :style="{ top: navbarTop }"
+    >
       <!-- <transition name="spin"> -->
+      <template v-slot:prepend>
+        <PageLogo class="ml-3 mt-3" />
+      </template>
       <template v-slot:append>
         <v-app-bar-nav-icon
           ref="hamburgerIcon"
@@ -19,8 +27,6 @@
       location="right"
       style="height: 100%"
       color="#111111"
-      ref="navbar"
-      class="navbar hidden"
     >
       <v-list>
         <v-list-item class="ml-2" v-for="item in links" :key="item.link">
@@ -38,11 +44,15 @@
 
 <script>
 import Button from '@/components/Button.vue'
+import PageLogo from '@/components/PageLogo.vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export default {
   name: 'TheNavbarMobile',
   components: {
     Button,
+    PageLogo,
   },
   data() {
     return {
@@ -65,6 +75,8 @@ export default {
           link: 'contact',
         },
       ],
+      navbarTop: '0',
+      lastScrollTop: 0,
     }
   },
   methods: {
@@ -75,6 +87,23 @@ export default {
       const elem = document.getElementById(`${itemId}`)
       elem.scrollIntoView({ behavior: 'smooth' })
       this.isClicked = false
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      if (scrollTop > this.lastScrollTop) {
+        this.navbarTop = '-80px'
+      } else {
+        this.navbarTop = '0'
+      }
+      this.lastScrollTop = scrollTop
     },
   },
 }
