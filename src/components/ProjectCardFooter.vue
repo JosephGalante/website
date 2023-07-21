@@ -1,25 +1,13 @@
 <template>
-  <v-card-text class="px-4">
-    <div class="d-flex align-center justify-space-between">
-      <div>
-        <v-icon
-          class="mr-1"
-          icon="fa-solid fa-circle"
-          size="x-small"
-          :color="color"
-        ></v-icon>
-        <span class="mr-3">{{ language }}</span>
-
-        <v-icon class="mr-1" icon="fa-solid fa-star" size="x-small"></v-icon>
-        <span class="mr-3">{{ numStars }}</span>
-        <v-icon
-          class="mr-1"
-          icon="fa-solid fa-code-fork"
-          size="x-small"
-        ></v-icon>
-        <span class="mr-3">{{ numForks }}</span>
-      </div>
-      <span v-if="repoSize > 0">{{ repoSize }} MB</span>
+  <v-card-text class="pl-4">
+    <div>
+      <v-icon
+        class="mr-2 pb-1"
+        icon="fa-solid fa-circle"
+        size="small"
+        :color="color"
+      />
+      <span class="mr-3">{{ language }}</span>
     </div>
   </v-card-text>
 </template>

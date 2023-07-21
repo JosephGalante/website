@@ -13,6 +13,7 @@
         href="https://github.com/JosephGalante/FindACoach"
         target="_blank"
         rel="noopener noreferrer"
+        class="click-link"
       >
         <v-icon
           class="icon-link ml-3"
@@ -24,6 +25,7 @@
         href="https://findacoach-ebc23.web.app/coaches"
         target="_blank"
         rel="noopener noreferrer"
+        class="click-link"
       >
         <v-icon
           class="icon-link ml-3"

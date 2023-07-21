@@ -1,6 +1,6 @@
 <template>
   <v-col :cols="cardSize" class="pa-2" :class="`project-card-${project.id}`">
-    <v-card variant="tonal">
+    <v-card variant="tonal" @click="handleClickOutside($event, project.githubLink)">
       <ProjectCardHeader
         :githubLink="project.githubLink"
         :liveLink="project.liveLink"
@@ -43,8 +43,18 @@ export default {
       required: true,
     },
   },
+  methods: {
+    handleClickOutside(event, link) {
+      console.log('event', event);
+      console.log('link', link);
+      if (!event.target.closest('.click-link')) {
+        window.open(link, '_blank')
+      }
+    },
+  },
   computed: {
     cardSize() {
+      // do stuff with flex layout and flex wrap so that when the screen is small, the cards will wrap
       return window.innerWidth <= 600 ? 12 : 4
     },
   },

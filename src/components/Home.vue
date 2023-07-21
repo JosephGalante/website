@@ -5,9 +5,7 @@
       <div class="text-h1 mb-10">Joe Galante.</div>
       <div class="text-h6 mb-10 home-intro">
         I'm a Software Engineer with a passion for learning new stuff. Right
-        now, I'm helping ensure autonomous vehicle safety at
-        <text-link :url="`https://www.ecr.ai`">Edge Case Research</text-link>
-        .
+        now, I'm helping ensure autonomous vehicle safety at Edge Case Research.
       </div>
       <div>
         <Button :link="'/experience'">Check out my work!</Button>

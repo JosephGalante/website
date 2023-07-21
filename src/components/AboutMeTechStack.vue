@@ -8,7 +8,7 @@
 
       <li>
         <v-icon icon="fas fa-angle-right"></v-icon>
-        JavaScript (ES6+)
+        JavaScript
       </li>
 
       <li>
@@ -22,7 +22,7 @@
       </li>
       <li>
         <v-icon icon="fas fa-angle-right"></v-icon>
-        R
+        C
       </li>
     </ul>
     <ul>
@@ -32,19 +32,19 @@
       </li>
       <li>
         <v-icon icon="fas fa-angle-right"></v-icon>
-        Node.js
-      </li>
-      <li>
-        <v-icon icon="fas fa-angle-right"></v-icon>
-        HTML
-      </li>
-      <li>
-        <v-icon icon="fas fa-angle-right"></v-icon>
-        CSS
+        React.js
       </li>
       <li>
         <v-icon icon="fas fa-angle-right"></v-icon>
         Docker
+      </li>
+      <li>
+        <v-icon icon="fas fa-angle-right"></v-icon>
+        Kubernetes
+      </li>
+      <li>
+        <v-icon icon="fas fa-angle-right"></v-icon>
+        Node.js
       </li>
     </ul>
   </div>

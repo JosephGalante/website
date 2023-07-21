@@ -14,9 +14,27 @@ export const projects = [
   },
   {
     id: 2,
+    title: `React Chat App`,
+    description: `Created a fully functional chat application using React.js, with a live-chat feature, user authentication, and a back-end to store messages.`,
+    liveLink: `https://incredible-crisp-4050e0.netlify.app/`,
+    githubLink: `https://github.com/JosephGalante/ChatApp`,
+    repoName: `Portfolio`,
+    skills: { React: '#61DBFB' },
+  },
+  {
+    id: 3,
+    title: `Pathfinder Visualizer`,
+
+    description: `A web app that visualizes several different pathfinding algorithms demonstrating how each algorithm finds the shortest path in a graph.`,
+    liveLink: `https://pathfinder-neon.vercel.app`,
+    githubLink: `https://github.com/JosephGalante/pathfinder`,
+    repoName: `Portfolio`,
+    skills: { 'Vue.js': '#4FC08D' },
+  },
+  {
+    id: 4,
     title: `YelpCamp`,
-    description: `This portfolio website was built using React.js, Gatsby.js, and
-        Tailwind CSS. It is hosted on Netlify.`,
+    description: `An extensive web app for users to share their favorite campgrounds, using HTML/CSS/JS, Node.js, Express.js, and MongoDB.`,
     liveLink: `https://findacoach-ebc23.web.app/coaches`,
     githubLink: `https://github.com/JosephGalante/FindACoach`,
     repoName: `YelpCamp`,
@@ -25,43 +43,22 @@ export const projects = [
     },
   },
   {
-    id: 3,
-    title: `Wordle`,
-    description: `This portfolio website was built using React.js, Gatsby.js, and
-        Tailwind CSS. It is hosted on Netlify.`,
-    liveLink: `https://findacoach-ebc23.web.app/coaches`,
-    githubLink: `https://github.com/JosephGalante/FindACoach`,
-    repoName: `Wordle`,
-    skills: { 'Vue.js': '#4FC08D' },
-  },
-  {
-    id: 4,
-    title: `Portfolio`,
-    description: `This portfolio website was built using React.js, Gatsby.js, and
-        Tailwind CSS. It is hosted on Netlify.`,
-    liveLink: `https://findacoach-ebc23.web.app/coaches`,
-    githubLink: `https://github.com/JosephGalante/FindACoach`,
-    repoName: `Portfolio`,
-    skills: { 'Vue.js': '#4FC08D' },
-  },
-  {
     id: 5,
-    title: `Portfolio`,
-    description: `This portfolio website was built using React.js, Gatsby.js, and
-        Tailwind CSS. It is hosted on Netlify.`,
-    liveLink: `https://findacoach-ebc23.web.app/coaches`,
-    githubLink: `https://github.com/JosephGalante/FindACoach`,
+    title: `Portfolio Website`,
+    description: `Developed a portfolio website using Vue.js and Vuetify hosted on Vercel that showcases my projects and skills.`,
+    liveLink: `https://vercel.com/josephgalante/website`,
+    githubLink: `https://github.com/JosephGalante/website`,
     repoName: `Portfolio`,
     skills: { 'Vue.js': '#4FC08D' },
   },
+
   {
     id: 6,
-    title: `Portfolio`,
-    description: `This portfolio website was built using React.js, Gatsby.js, and
-        Tailwind CSS. It is hosted on Netlify.`,
+    title: `Wordle`,
+    description: `As a daily Wordle player, I created a Wordle clone so that I could play every day without having to wait for the next day's puzzle.`,
     liveLink: `https://findacoach-ebc23.web.app/coaches`,
-    githubLink: `https://github.com/JosephGalante/FindACoach`,
-    repoName: `Portfolio`,
+    githubLink: `https://github.com/JosephGalante/wordle`,
+    repoName: `Wordle`,
     skills: { 'Vue.js': '#4FC08D' },
   },
 ]
