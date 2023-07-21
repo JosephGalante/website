@@ -28,10 +28,8 @@ export default {
       // referencing window properties are not reactive, maybe use a watcher? or just find a way to do a better navbar
       // hook up an emit event to the browsers resize property
 
-
-      // instead of having two components here, have the navbar itself decide which kind of navbar should be rendered. we shouldn't need to know the 
-      // window width from this component, doesn't make sense 
-
+      // instead of having two components here, have the navbar itself decide which kind of navbar should be rendered. we shouldn't need to know the
+      // window width from this component, doesn't make sense
 
       // think about no matter how they are displayed, the 2 should share the same logic
       // think how I should set up my subcomponents if i decide to split them up, how I can set them up so that they can be reused and NOT DUPLICATED CODE

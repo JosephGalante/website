@@ -1,6 +1,9 @@
 <template>
   <v-col :cols="cardSize" class="pa-2" :class="`project-card-${project.id}`">
-    <v-card variant="tonal" @click="handleClickOutside($event, project.githubLink)">
+    <v-card
+      variant="tonal"
+      @click="handleClickOutside($event, project.githubLink)"
+    >
       <ProjectCardHeader
         :githubLink="project.githubLink"
         :liveLink="project.liveLink"
@@ -45,8 +48,8 @@ export default {
   },
   methods: {
     handleClickOutside(event, link) {
-      console.log('event', event);
-      console.log('link', link);
+      console.log('event', event)
+      console.log('link', link)
       if (!event.target.closest('.click-link')) {
         window.open(link, '_blank')
       }

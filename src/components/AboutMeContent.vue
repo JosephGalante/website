@@ -46,7 +46,7 @@ import { ref, computed, defineAsyncComponent } from 'vue'
 import { useMouseInElement } from '@vueuse/core'
 
 const AboutMeTechStack = defineAsyncComponent(() =>
-  import('@/components/AboutMeTechStack.vue')
+  import('@/components/AboutMeTechStack.vue'),
 )
 
 const target = ref(null)
@@ -70,7 +70,7 @@ const imgTransform = computed(() => {
 })
 
 const gradient = ref(
-  'to top, rgba(255, 187, 28, 0.25), rgba(255, 187, 28, 0.25)'
+  'to top, rgba(255, 187, 28, 0.25), rgba(255, 187, 28, 0.25)',
 )
 
 function mouseOver() {
