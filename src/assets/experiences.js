@@ -1,6 +1,6 @@
 export const ecrTitle = `Software Engineer`
 export const ecrCompanyName = `Edge Case Research`
-export const ecrDuration = `May 2022 - Present`
+export const ecrDuration = `May 2022 - August 2023`
 export const ecrSite = `https://www.ecr.ai/`
 export const ecrTask1 = `Collaborated on a cross-functional team of engineers to design and
         implement new features for a web application aimed at ensuring

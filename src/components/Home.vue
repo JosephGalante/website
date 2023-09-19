@@ -4,8 +4,8 @@
       <div class="text-h4 mb-10 hey">Hey 👋, pleasure to meet you. I'm</div>
       <div class="text-h1 mb-10">Joe Galante.</div>
       <div class="text-h6 mb-10 home-intro">
-        I'm a Software Engineer with a passion for learning new stuff. Right
-        now, I'm helping ensure autonomous vehicle safety at Edge Case Research.
+        I'm a Software Engineer with an insatiable passion for learning new technologies. Right
+        now, I'm on the hunt for a new opportunity.
       </div>
       <div>
         <Button :link="'/experience'">Check out my work!</Button>

@@ -18,9 +18,9 @@
     </v-col>
     <v-col class="d-flex text-center">
       <p>
-        Hey there. Even though I'm not in the hunt for anything new right now,
-        feel free to drop me a message. Whether you want to ask something or say
-        hi, just reach out.
+        Hey there. Thanks for checking out my site. If you're interested in
+        working together, or just want to say hi, feel free to reach out to me
+        at the link below.
       </p>
     </v-col>
     <v-col class="d-flex justify-center mt-3">

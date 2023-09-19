@@ -15,10 +15,9 @@
         to rock climb and explore the great outdoors.
       </p>
       <p class="mb-6">
-        Currently, I work as a Software Engineer at
-        <text-link url="https://www.ecr.ai">Edge Case Research</text-link>
-        , and am always looking for opportunities to grow and new challenges to
-        take on.
+        Currently, I'm looking for a new opportunity as a Software Engineer.
+        If you're looking for a passionate and eager to learn developer, feel
+        free to reach out to me at the link at the bottom of the page.
       </p>
 
       <p>Here are some technologies in which I consider myself proficient:</p>
