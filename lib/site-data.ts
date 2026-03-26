@@ -1,6 +1,10 @@
-export type NavLink = {
+export interface NavLink {
   label: string
   href: string
+}
+
+export interface Social extends NavLink {
+  icon: 'github' | 'linkedin' | 'mail' | 'codepen'
 }
 
 export type Project = {
@@ -205,7 +209,7 @@ export const projects: Project[] = [
   },
 ]
 
-export const socials = [
+export const socials: Social[] = [
   {
     label: 'GitHub',
     href: 'https://www.github.com/JosephGalante',
@@ -226,4 +230,4 @@ export const socials = [
     href: 'https://www.codepen.io/joegalante',
     icon: 'codepen',
   },
-] as const
+]

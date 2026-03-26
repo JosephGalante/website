@@ -1,3 +1,4 @@
+import type {Social} from '@/lib/site-data'
 import {socials} from '@/lib/site-data'
 import {
   CodepenIcon,
@@ -5,33 +6,36 @@ import {
   LinkedinIcon,
   MailIcon,
 } from '@/components/icons'
+import {ReactNode} from 'react'
 
-function SocialIcon({icon}: {icon: (typeof socials)[number]['icon']}) {
-  switch (icon) {
-    case 'github':
-      return <GithubIcon className="social-icon" />
-    case 'linkedin':
-      return <LinkedinIcon className="social-icon" />
-    case 'mail':
-      return <MailIcon className="social-icon" />
-    case 'codepen':
-      return <CodepenIcon className="social-icon" />
-  }
+type SocialIconProps = {
+  icon: Social['icon']
+}
+
+const socialIconMap: Record<Social['icon'], ReactNode> = {
+  github: <GithubIcon className="social-icon" />,
+  linkedin: <LinkedinIcon className="social-icon" />,
+  mail: <MailIcon className="social-icon" />,
+  codepen: <CodepenIcon className="social-icon" />,
+}
+
+function SocialIcon({icon}: SocialIconProps) {
+  return socialIconMap[icon]
 }
 
 export function SocialSidebar() {
   return (
     <aside className="social-sidebar" aria-label="Social links">
       <ul>
-        {socials.map((social) => (
-          <li key={social.label}>
+        {socials.map(({href, label, icon}) => (
+          <li key={href}>
             <a
-              href={social.href}
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={social.label}
+              aria-label={label}
             >
-              <SocialIcon icon={social.icon} />
+              <SocialIcon icon={icon} />
             </a>
           </li>
         ))}
