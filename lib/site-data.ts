@@ -157,12 +157,16 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'React Chat App',
+    title: 'Portfolio Analytics',
     description:
-      'Created a fully functional chat application using React.js, with a live-chat feature, user authentication, and a back-end to store messages.',
-    liveLink: 'https://incredible-crisp-4050e0.netlify.app/',
-    githubLink: 'https://github.com/JosephGalante/ChatApp',
-    skills: [{label: 'React', color: '#61DBFB'}],
+      'A real-time portfolio analytics platform with live valuation updates, holdings management, and an event-driven backend using FastAPI, Redis, PostgreSQL, and Next.js.',
+    liveLink: 'https://galante-portfolio-analytics-project.vercel.app/',
+    githubLink: 'https://github.com/JosephGalante/portfolio_analytics.git',
+    skills: [
+      {label: 'Next.js', color: '#ffffff'},
+      {label: 'FastAPI', color: '#009688'},
+      {label: 'Redis', color: '#DC382D'},
+    ],
   },
   {
     id: 3,
@@ -175,20 +179,20 @@ export const projects: Project[] = [
   },
   {
     id: 4,
+    title: 'React Chat App',
+    description:
+      'Created a fully functional chat application using React.js, with a live-chat feature, user authentication, and a back-end to store messages.',
+    liveLink: 'https://incredible-crisp-4050e0.netlify.app/',
+    githubLink: 'https://github.com/JosephGalante/ChatApp',
+    skills: [{label: 'React', color: '#61DBFB'}],
+  },
+  {
+    id: 5,
     title: 'YelpCamp',
     description:
       'An extensive web app for users to share their favorite campgrounds, using HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB.',
     githubLink: 'https://github.com/JosephGalante/YelpCamp',
     skills: [{label: 'JavaScript', color: '#F7DF1E'}],
-  },
-  {
-    id: 5,
-    title: 'Portfolio Website',
-    description:
-      'Developed this portfolio website using React, Next.js, and TypeScript, hosted on Vercel to showcase my projects and experience.',
-    liveLink: 'https://galante.vercel.app/',
-    githubLink: 'https://github.com/JosephGalante/website',
-    skills: [{label: 'Next.js', color: '#ffffff'}],
   },
   {
     id: 6,
