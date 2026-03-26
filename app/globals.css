@@ -394,6 +394,10 @@ main {
   background: rgba(255, 184, 28, 0.06);
 }
 
+.experience-tablist button:focus-visible {
+  outline-offset: -2px;
+}
+
 .experience-panel {
   min-height: 18rem;
 }
@@ -504,6 +508,11 @@ main {
   margin: 0 0 1.25rem;
   color: var(--muted);
   line-height: 1.75;
+}
+
+.project-card:focus-visible {
+  border-color: rgba(255, 184, 28, 0.6);
+  box-shadow: 0 0 0 3px rgba(255, 184, 28, 0.18);
 }
 
 .project-skills {

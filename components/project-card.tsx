@@ -10,8 +10,10 @@ type ProjectCardProps = {
 }
 
 export function ProjectCard({project, delay = 0}: ProjectCardProps) {
-  const openRepo = () => {
-    window.open(project.githubLink, '_blank', 'noopener,noreferrer')
+  const primaryLink = project.liveLink ?? project.githubLink
+
+  const openPrimaryLink = () => {
+    window.open(primaryLink, '_blank', 'noopener,noreferrer')
   }
 
   const stop = (event: MouseEvent<HTMLAnchorElement>) => {
@@ -22,15 +24,16 @@ export function ProjectCard({project, delay = 0}: ProjectCardProps) {
     <article
       className="project-card reveal is-visible"
       style={{transitionDelay: `${delay}ms`}}
-      onClick={openRepo}
+      onClick={openPrimaryLink}
       onKeyDown={(event) => {
         if (event.key === 'Enter' || event.key === ' ') {
           event.preventDefault()
-          openRepo()
+          openPrimaryLink()
         }
       }}
       role="link"
       tabIndex={0}
+      aria-label={`${project.title} project`}
     >
       <div className="project-card-top">
         <FolderIcon className="project-folder" />
@@ -40,17 +43,21 @@ export function ProjectCard({project, delay = 0}: ProjectCardProps) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={stop}
+            aria-label={`${project.title} source code`}
           >
             <GithubIcon className="project-link-icon" />
           </a>
-          <a
-            href={project.liveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={stop}
-          >
-            <ArrowRightUpIcon className="project-link-icon" />
-          </a>
+          {project.liveLink ? (
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={stop}
+              aria-label={`${project.title} live site`}
+            >
+              <ArrowRightUpIcon className="project-link-icon" />
+            </a>
+          ) : null}
         </div>
       </div>
 

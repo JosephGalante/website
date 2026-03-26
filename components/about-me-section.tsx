@@ -14,7 +14,9 @@ export default function AboutMeSection() {
               I&apos;m a full-stack software engineer based in Chicago,
               currently building financial software with a strong emphasis on
               backend systems, product ownership, and shipping features that
-              hold up under real usage.
+              hold up under real usage. I do my best work in environments where
+              I can be thoughtful, collaborative, and close to both product
+              decisions and implementation details.
             </p>
             <p>
               Most recently, I&apos;ve been working on portfolio and trading
@@ -40,11 +42,11 @@ export default function AboutMeSection() {
                 rel="noopener noreferrer"
               >
                 University of Pittsburgh
-              </a>
+              </a>{' '}
               with degrees in Computer Science and Finance, which maps closely
               to the kind of technical and business problems I like solving.
-              Outside of work, I&apos;m usually rock climbing or finding a
-              reason to get outside.
+              Outside of work, I&apos;m usually rock climbing, getting outside,
+              or spending time with friends and family.
             </p>
             <p>Relevant skills and languages I use regularly:</p>
             <div className="tech-grid">

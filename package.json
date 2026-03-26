@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --config .prettierrc --write '**/*.{ts,tsx,js,jsx,css,md}'"
+    "format": "prettier --config .prettierrc --write '**/*.{ts,tsx,js,jsx,css,md}'",
+    "format:check": "prettier --config .prettierrc --check '**/*.{ts,tsx,js,jsx,css,md}'",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "syntax": "tsc --noEmit"
   },
   "dependencies": {
     "next": "^15.0.0",
@@ -17,6 +20,8 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.5.4",
     "prettier": "^3.8.1",
     "typescript": "^5.9.3"
   }

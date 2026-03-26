@@ -6,21 +6,26 @@ import {
   LinkedinIcon,
   MailIcon,
 } from '@/components/icons'
-import {ReactNode} from 'react'
+import type {ComponentType} from 'react'
 
 type SocialIconProps = {
   icon: Social['icon']
 }
 
-const socialIconMap: Record<Social['icon'], ReactNode> = {
-  github: <GithubIcon className="social-icon" />,
-  linkedin: <LinkedinIcon className="social-icon" />,
-  mail: <MailIcon className="social-icon" />,
-  codepen: <CodepenIcon className="social-icon" />,
+type SocialIconComponent = ComponentType<{
+  className?: string
+}>
+
+const socialIconMap: Record<Social['icon'], SocialIconComponent> = {
+  github: GithubIcon,
+  linkedin: LinkedinIcon,
+  mail: MailIcon,
+  codepen: CodepenIcon,
 }
 
 function SocialIcon({icon}: SocialIconProps) {
-  return socialIconMap[icon]
+  const Icon = socialIconMap[icon]
+  return <Icon className="social-icon" />
 }
 
 export function SocialSidebar() {

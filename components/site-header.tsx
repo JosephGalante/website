@@ -42,6 +42,27 @@ export function SiteHeader({links}: SiteHeaderProps) {
     return () => window.removeEventListener('resize', closeMenu)
   }, [])
 
+  useEffect(() => {
+    if (!menuOpen) {
+      document.body.style.overflow = ''
+      return
+    }
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+      }
+    }
+
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', onKeyDown)
+
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [menuOpen])
+
   return (
     <header
       className={['site-header', hidden ? 'is-hidden' : '']
@@ -85,6 +106,7 @@ export function SiteHeader({links}: SiteHeaderProps) {
         className={['mobile-nav-shell', menuOpen ? 'is-open' : '']
           .filter(Boolean)
           .join(' ')}
+        aria-hidden={!menuOpen}
       >
         <nav className="mobile-nav" aria-label="Mobile">
           {links.map((link) => (
