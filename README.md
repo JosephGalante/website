@@ -1,44 +1,17 @@
-# My Website
+# Joe Galante Portfolio
 
-## Project setup
+This project is now a Next.js App Router site written in React and TypeScript.
+
+## Development
 
 ```sh
-# yarn
-yarn
-
-# npm
 npm install
-
-# pnpm
-pnpm install
-```
-
-### Compiles and hot-reloads for development
-
-```sh
-# yarn
-yarn dev
-
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
 ```
 
-### Compiles and minifies for production
+## Production build
 
 ```sh
-# yarn
-yarn build
-
-# npm
 npm run build
-
-# pnpm
-pnpm build
+npm run start
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://vitejs.dev/config/).

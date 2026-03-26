@@ -1,28 +1,22 @@
 {
   "name": "website",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "jest",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "format:prettier": "prettier --config .prettierrc --write '**/*.{js,scss,css,vue}'"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format:prettier": "prettier --config .prettierrc --write '**/*.{ts,tsx,js,jsx,css,md}'"
   },
   "dependencies": {
-    "@vueuse/core": "^9.12.0",
-    "gsap": "^3.11.4",
-    "roboto-fontface": "*",
-    "sass": "^1.56.1",
-    "vue": "^3.2.38",
-    "vue-jest": "^5.0.0-alpha.10",
-    "vue-router": "^4.1.6",
-    "vuetify": "^3.0.0",
-    "webfontloader": "^1.0.0"
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.1",
-    "@vitejs/plugin-vue": "^3.0.3",
-    "vite": "^3.1.9",
-    "vite-plugin-vuetify": "^1.0.0-alpha.12"
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
   }
 }
