@@ -57,7 +57,7 @@ export default function HomePage() {
                   learn developer, feel free to reach out to me at the link at
                   the bottom of the page.
                 </p>
-                <p>Here are some technologies in which I consider myself proficient:</p>
+                <p>Relevant skills and languages I use regularly:</p>
                 <div className="tech-grid">
                   {techStack.map((item) => (
                     <div key={item} className="tech-item">

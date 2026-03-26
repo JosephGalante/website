@@ -20,8 +20,16 @@ export type Job = {
   id: string
   title: string
   companyName: string
-  duration: string
+  start: {
+    month: number
+    year: number
+  }
+  end?: {
+    month: number
+    year: number
+  }
   companySite: string
+  stack: string
   tasks: string[]
 }
 
@@ -33,52 +41,102 @@ export const navLinks: NavLink[] = [
 ]
 
 export const techStack = [
-  'Go',
-  'JavaScript',
-  'Python',
-  'Java',
-  'C',
-  'Vue.js',
   'React.js',
-  'Docker',
-  'Kubernetes',
+  'Python',
+  'Django',
+  'Next.js',
+  'Golang',
+  'Vue.js',
+  'JavaScript',
+  'TypeScript',
+  'Java',
+  'SQL',
   'Node.js',
+  'Docker',
 ]
 
 export const jobs: Job[] = [
   {
+    id: 'canopy',
+    title: 'Software Engineer',
+    companyName: 'Canopy Capital',
+    start: {
+      month: 10,
+      year: 2023,
+    },
+    companySite: 'https://canopycapital.com/',
+    stack: 'Python, React, Next.js, Django, TypeScript, Docker, GCP',
+    tasks: [
+      'Own end-to-end architecture and delivery of core financial workflows across Django APIs and Next.js clients, supporting platform growth from launch to 250+ daily active users and over $1B in managed assets.',
+      'Led system design and rollout of a centralized RBAC and object-level authorization platform governing firm, advisor, and portfolio access across critical trading and portfolio management paths, replacing fragmented legacy permission logic and improving security, maintainability, and auditability.',
+      'Architected Redis-backed caching strategies for high-traffic portfolio analytics endpoints, reducing average response latency by roughly 30% and stabilizing performance under peak usage.',
+      'Designed asynchronous event-driven notification pipelines using Google Cloud Tasks to decouple trade execution from user alert delivery, improving reliability and request throughput for time-sensitive portfolio update flows.',
+      'Own evolution of core financial data models and migration strategy, executing backward-compatible schema changes and data transformations with zero production incidents attributable to database migrations.',
+      'Built an internal administrative platform from scratch, enabling real-time visibility into advisor trading activity, portfolio performance, and firm-level AUM growth, improving operational efficiency for internal stakeholders.',
+      'Containerized and routed backend services using Docker and Traefik, integrating fixed-income trading pipelines into centralized internal tooling and accelerating bond analysis and execution workflows.',
+      'Optimized API performance and reduced payload sizes across portfolio and trading endpoints, improving dashboard responsiveness and overall system scalability.',
+    ],
+  },
+  {
     id: 'ecr',
     title: 'Software Engineer',
     companyName: 'Edge Case Research',
-    duration: 'May 2022 - August 2023',
+    start: {
+      month: 5,
+      year: 2022,
+    },
+    end: {
+      month: 8,
+      year: 2023,
+    },
     companySite: 'https://www.ecr.ai/',
+    stack: 'Vue.js, Golang, Python, PostgreSQL, Docker, Kubernetes',
     tasks: [
-      'Collaborated on a cross-functional team of engineers to design and implement new features for a web application aimed at ensuring autonomous vehicle safety, utilizing Golang on the backend and Vue.js on the front-end.',
-      'Developed new user-interface features by collaborating with the product team, resulting in increased user satisfaction and a smooth user experience for end-users.',
-      'Leveraged Docker and Kubernetes to optimize and streamline application deployments and clusters, leading to reductions in downtime and improved system scalability by collaborating with the platform engineering team.',
+      'Built backend services and data processing features in Golang and Python for an autonomous vehicle safety platform, supporting ingestion and analysis of vehicle telemetry data used in production environments.',
+      'Designed and implemented data workflows and API integrations supporting vehicle telemetry and safety analysis use cases, improving reliability and usability of core platform features.',
+      'Owned full lifecycle delivery of multiple features from technical design through deployment, including testing, debugging production issues, and coordinating releases with cross-functional teams.',
+      'Collaborated closely with product managers, designers, and users to translate real-world safety requirements into scalable technical solutions, ensuring alignment between engineering execution and customer needs.',
+      'Mentored an engineering intern on code quality, debugging strategies, and system architecture concepts, accelerating onboarding and delivery impact.',
+      'Worked within containerized environments and early Kubernetes-based deployments, gaining exposure to distributed system operations and service orchestration patterns.',
     ],
   },
   {
     id: 'mma',
     title: 'Data Analyst',
     companyName: 'Marsh & McLennan Agency',
-    duration: 'May 2021 - July 2021',
+    start: {
+      month: 5,
+      year: 2021,
+    },
+    end: {
+      month: 7,
+      year: 2021,
+    },
     companySite: 'https://www.marshmclennan.com/',
+    stack: 'SQL, Power BI, Salesforce',
     tasks: [
       'Manipulated data in SQL to develop benchmarking dashboards for use in client sales meetings.',
-      'Developed industry benchmarking Power BI dashboards for use in sales pitches to potential clients. Presented dashboards to upper management.',
-      'Aggregated data in Salesforce CRM database for 8 major clients to streamline marketing strategies for salespeople.',
+      'Developed industry benchmarking Power BI dashboards for use in sales pitches to potential clients and presented dashboards to upper management.',
+      'Aggregated data in the Salesforce CRM database for 8 major clients to streamline marketing strategies for sales teams.',
     ],
   },
   {
     id: 'pip',
     title: 'Online Trainer',
     companyName: 'Partner in Publishing',
-    duration: 'May 2020 - August 2020',
+    start: {
+      month: 5,
+      year: 2020,
+    },
+    end: {
+      month: 8,
+      year: 2020,
+    },
     companySite: 'https://www.partnerinpublishing.com/',
+    stack: 'Canvas, Excel Macros, Training',
     tasks: [
       'Individually trained more than 250 undergraduate professors to use learning management systems such as Canvas.',
-      'Ranked among top 3 of 25 trainers in customer satisfaction surveys for three consecutive months.',
+      'Ranked among the top 3 of 25 trainers in customer satisfaction surveys for three consecutive months.',
       'Wrote Microsoft Excel Macro applications to improve team productivity in automated reporting.',
     ],
   },
