@@ -70,10 +70,10 @@ export default function HomePage() {
                   <a
                     href="https://www.pitt.edu"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     University of Pittsburgh
-                  </a>{' '}
+                  </a>
                   with degrees in Computer Science and Finance, which maps
                   closely to the kind of technical and business problems I like
                   solving. Outside of work, I&apos;m usually rock climbing or

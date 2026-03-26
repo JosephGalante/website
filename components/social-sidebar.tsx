@@ -25,7 +25,7 @@ export function SocialSidebar() {
       <ul>
         {socials.map((social) => (
           <li key={social.label}>
-            <a href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
+            <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
               <SocialIcon icon={social.icon} />
             </a>
           </li>

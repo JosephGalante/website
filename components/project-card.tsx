@@ -35,10 +35,10 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
       <div className="project-card-top">
         <FolderIcon className="project-folder" />
         <div className="project-links">
-          <a href={project.githubLink} target="_blank" rel="noreferrer" onClick={stop}>
+          <a href={project.githubLink} target="_blank" rel="noopener noreferrer" onClick={stop}>
             <GithubIcon className="project-link-icon" />
           </a>
-          <a href={project.liveLink} target="_blank" rel="noreferrer" onClick={stop}>
+          <a href={project.liveLink} target="_blank" rel="noopener noreferrer" onClick={stop}>
             <ArrowRightUpIcon className="project-link-icon" />
           </a>
         </div>
