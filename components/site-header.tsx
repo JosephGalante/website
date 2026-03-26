@@ -9,6 +9,8 @@ type SiteHeaderProps = {
   links: NavLink[]
 }
 
+const resumeLink = '/resume.pdf'
+
 export function SiteHeader({ links }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [hidden, setHidden] = useState(false)
@@ -55,7 +57,7 @@ export function SiteHeader({ links }: SiteHeaderProps) {
               </li>
             ))}
           </ol>
-          <SiteButton href="/RESUME-Galante(ECR1).pdf" target="_blank" rel="noreferrer">
+          <SiteButton href={resumeLink} target="_blank" rel="noreferrer">
             Resumé
           </SiteButton>
         </nav>
@@ -79,7 +81,7 @@ export function SiteHeader({ links }: SiteHeaderProps) {
             </a>
           ))}
           <SiteButton
-            href="/RESUME-Galante(ECR1).pdf"
+            href={resumeLink}
             target="_blank"
             rel="noreferrer"
             onClick={() => setMenuOpen(false)}
