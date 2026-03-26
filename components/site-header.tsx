@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { CloseIcon, MenuIcon } from '@/components/icons'
-import { SiteButton } from '@/components/site-button'
-import type { NavLink } from '@/lib/site-data'
+import {useEffect, useState} from 'react'
+import {CloseIcon, MenuIcon} from '@/components/icons'
+import {SiteButton} from '@/components/site-button'
+import type {NavLink} from '@/lib/site-data'
 
 type SiteHeaderProps = {
   links: NavLink[]
@@ -11,7 +11,7 @@ type SiteHeaderProps = {
 
 const resumeLink = '/resume.pdf'
 
-export function SiteHeader({ links }: SiteHeaderProps) {
+export function SiteHeader({links}: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [hidden, setHidden] = useState(false)
 
@@ -31,7 +31,7 @@ export function SiteHeader({ links }: SiteHeaderProps) {
       lastScrollY = nextScrollY
     }
 
-    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('scroll', onScroll, {passive: true})
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
@@ -43,7 +43,11 @@ export function SiteHeader({ links }: SiteHeaderProps) {
   }, [])
 
   return (
-    <header className={['site-header', hidden ? 'is-hidden' : ''].filter(Boolean).join(' ')}>
+    <header
+      className={['site-header', hidden ? 'is-hidden' : '']
+        .filter(Boolean)
+        .join(' ')}
+    >
       <div className="site-header-inner">
         <a href="#top" className="site-logo" onClick={() => setMenuOpen(false)}>
           JG
@@ -69,14 +73,26 @@ export function SiteHeader({ links }: SiteHeaderProps) {
           aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
           onClick={() => setMenuOpen((value) => !value)}
         >
-          {menuOpen ? <CloseIcon className="menu-icon" /> : <MenuIcon className="menu-icon" />}
+          {menuOpen ? (
+            <CloseIcon className="menu-icon" />
+          ) : (
+            <MenuIcon className="menu-icon" />
+          )}
         </button>
       </div>
 
-      <div className={['mobile-nav-shell', menuOpen ? 'is-open' : ''].filter(Boolean).join(' ')}>
+      <div
+        className={['mobile-nav-shell', menuOpen ? 'is-open' : '']
+          .filter(Boolean)
+          .join(' ')}
+      >
         <nav className="mobile-nav" aria-label="Mobile">
           {links.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+            >
               {link.label}
             </a>
           ))}

@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import type { ReactNode } from 'react'
+import {useEffect, useRef, useState} from 'react'
+import type {ReactNode} from 'react'
 
 type RevealProps = {
   children: ReactNode
@@ -9,7 +9,7 @@ type RevealProps = {
   delay?: number
 }
 
-export function Reveal({ children, className = '', delay = 0 }: RevealProps) {
+export function Reveal({children, className = '', delay = 0}: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null)
   const [visible, setVisible] = useState(false)
 
@@ -27,7 +27,7 @@ export function Reveal({ children, className = '', delay = 0 }: RevealProps) {
           observer.disconnect()
         }
       },
-      { threshold: 0.2 }
+      {threshold: 0.2},
     )
 
     observer.observe(node)
@@ -40,7 +40,7 @@ export function Reveal({ children, className = '', delay = 0 }: RevealProps) {
     .join(' ')
 
   return (
-    <div ref={ref} className={classes} style={{ transitionDelay: `${delay}ms` }}>
+    <div ref={ref} className={classes} style={{transitionDelay: `${delay}ms`}}>
       {children}
     </div>
   )

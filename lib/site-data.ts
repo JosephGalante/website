@@ -34,10 +34,10 @@ export type Job = {
 }
 
 export const navLinks: NavLink[] = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  {label: 'About', href: '#about'},
+  {label: 'Experience', href: '#experience'},
+  {label: 'Projects', href: '#projects'},
+  {label: 'Contact', href: '#contact'},
 ]
 
 export const techStack = [
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     liveLink: 'https://findacoach-ebc23.web.app/coaches',
     githubLink: 'https://github.com/JosephGalante/FindACoach',
     repoName: 'FindACoach',
-    skills: [{ label: 'Vue.js', color: '#4FC08D' }],
+    skills: [{label: 'Vue.js', color: '#4FC08D'}],
   },
   {
     id: 2,
@@ -161,7 +161,7 @@ export const projects: Project[] = [
     liveLink: 'https://incredible-crisp-4050e0.netlify.app/',
     githubLink: 'https://github.com/JosephGalante/ChatApp',
     repoName: 'Portfolio',
-    skills: [{ label: 'React', color: '#61DBFB' }],
+    skills: [{label: 'React', color: '#61DBFB'}],
   },
   {
     id: 3,
@@ -171,7 +171,7 @@ export const projects: Project[] = [
     liveLink: 'https://pathfinder-neon.vercel.app',
     githubLink: 'https://github.com/JosephGalante/pathfinder',
     repoName: 'Portfolio',
-    skills: [{ label: 'Vue.js', color: '#4FC08D' }],
+    skills: [{label: 'Vue.js', color: '#4FC08D'}],
   },
   {
     id: 4,
@@ -181,7 +181,7 @@ export const projects: Project[] = [
     liveLink: 'https://findacoach-ebc23.web.app/coaches',
     githubLink: 'https://github.com/JosephGalante/FindACoach',
     repoName: 'YelpCamp',
-    skills: [{ label: 'JavaScript', color: '#F7DF1E' }],
+    skills: [{label: 'JavaScript', color: '#F7DF1E'}],
   },
   {
     id: 5,
@@ -191,7 +191,7 @@ export const projects: Project[] = [
     liveLink: 'https://vercel.com/josephgalante/website',
     githubLink: 'https://github.com/JosephGalante/website',
     repoName: 'Portfolio',
-    skills: [{ label: 'Vue.js', color: '#4FC08D' }],
+    skills: [{label: 'Vue.js', color: '#4FC08D'}],
   },
   {
     id: 6,
@@ -201,7 +201,7 @@ export const projects: Project[] = [
     liveLink: 'https://findacoach-ebc23.web.app/coaches',
     githubLink: 'https://github.com/JosephGalante/wordle',
     repoName: 'Wordle',
-    skills: [{ label: 'Vue.js', color: '#4FC08D' }],
+    skills: [{label: 'Vue.js', color: '#4FC08D'}],
   },
 ]
 

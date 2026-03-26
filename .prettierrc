@@ -3,6 +3,7 @@
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
+  "bracketSpacing": false,
   "htmlWhitespaceSensitivity": "ignore",
   "proseWrap": "preserve"
 }

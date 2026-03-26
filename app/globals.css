@@ -26,11 +26,7 @@ body {
     radial-gradient(circle at top, rgba(255, 184, 28, 0.14), transparent 28%),
     linear-gradient(180deg, #090909 0%, #030303 48%, #060606 100%);
   color: var(--text);
-  font-family:
-    'Avenir Next',
-    'Segoe UI',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: 'Avenir Next', 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 
 a {
@@ -336,7 +332,11 @@ main {
   position: absolute;
   inset: auto 10% -1.2rem 10%;
   height: 2rem;
-  background: radial-gradient(circle, rgba(255, 184, 28, 0.28), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 184, 28, 0.28),
+    transparent 70%
+  );
   filter: blur(18px);
 }
 

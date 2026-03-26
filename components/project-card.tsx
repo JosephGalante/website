@@ -1,15 +1,15 @@
 'use client'
 
-import type { MouseEvent } from 'react'
-import { ArrowRightUpIcon, FolderIcon, GithubIcon } from '@/components/icons'
-import type { Project } from '@/lib/site-data'
+import type {MouseEvent} from 'react'
+import {ArrowRightUpIcon, FolderIcon, GithubIcon} from '@/components/icons'
+import type {Project} from '@/lib/site-data'
 
 type ProjectCardProps = {
   project: Project
   delay?: number
 }
 
-export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
+export function ProjectCard({project, delay = 0}: ProjectCardProps) {
   const openRepo = () => {
     window.open(project.githubLink, '_blank', 'noopener,noreferrer')
   }
@@ -21,7 +21,7 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
   return (
     <article
       className="project-card reveal is-visible"
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{transitionDelay: `${delay}ms`}}
       onClick={openRepo}
       onKeyDown={(event) => {
         if (event.key === 'Enter' || event.key === ' ') {
@@ -35,10 +35,20 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
       <div className="project-card-top">
         <FolderIcon className="project-folder" />
         <div className="project-links">
-          <a href={project.githubLink} target="_blank" rel="noopener noreferrer" onClick={stop}>
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={stop}
+          >
             <GithubIcon className="project-link-icon" />
           </a>
-          <a href={project.liveLink} target="_blank" rel="noopener noreferrer" onClick={stop}>
+          <a
+            href={project.liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={stop}
+          >
             <ArrowRightUpIcon className="project-link-icon" />
           </a>
         </div>
@@ -50,7 +60,10 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
       <div className="project-skills">
         {project.skills.map((skill) => (
           <span key={skill.label} className="skill-pill">
-            <span className="skill-dot" style={{ backgroundColor: skill.color }} />
+            <span
+              className="skill-dot"
+              style={{backgroundColor: skill.color}}
+            />
             {skill.label}
           </span>
         ))}

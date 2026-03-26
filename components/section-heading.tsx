@@ -3,7 +3,7 @@ type SectionHeadingProps = {
   title: string
 }
 
-export function SectionHeading({ id, title }: SectionHeadingProps) {
+export function SectionHeading({id, title}: SectionHeadingProps) {
   return (
     <div className="section-heading">
       <h2 id={id}>{title}</h2>

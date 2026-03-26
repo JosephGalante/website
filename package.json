@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format:prettier": "prettier --config .prettierrc --write '**/*.{ts,tsx,js,jsx,css,md}'"
+    "format": "prettier --config .prettierrc --write '**/*.{ts,tsx,js,jsx,css,md}'"
   },
   "dependencies": {
     "next": "^15.0.0",
@@ -17,6 +17,7 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "typescript": "^5.0.0"
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
   }
 }

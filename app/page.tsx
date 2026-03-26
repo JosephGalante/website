@@ -1,13 +1,13 @@
-import { ArrowDownIcon } from '@/components/icons'
-import { ProjectCard } from '@/components/project-card'
-import { Reveal } from '@/components/reveal'
-import { SectionHeading } from '@/components/section-heading'
-import { ExperienceTabs } from '@/components/experience-tabs'
-import { SiteButton } from '@/components/site-button'
-import { SiteHeader } from '@/components/site-header'
-import { SocialSidebar } from '@/components/social-sidebar'
-import { TiltImage } from '@/components/tilt-image'
-import { jobs, navLinks, projects, techStack } from '@/lib/site-data'
+import {ArrowDownIcon} from '@/components/icons'
+import {ProjectCard} from '@/components/project-card'
+import {Reveal} from '@/components/reveal'
+import {SectionHeading} from '@/components/section-heading'
+import {SiteButton} from '@/components/site-button'
+import {SiteHeader} from '@/components/site-header'
+import {SocialSidebar} from '@/components/social-sidebar'
+import {TiltImage} from '@/components/tilt-image'
+import {navLinks, projects, techStack} from '@/lib/site-data'
+import JobsSection from '@/components/jobs-section'
 
 export default function HomePage() {
   return (
@@ -97,12 +97,7 @@ export default function HomePage() {
           </section>
         </Reveal>
 
-        <Reveal>
-          <section className="content-section" aria-labelledby="experience">
-            <SectionHeading id="experience" title="Experiences" />
-            <ExperienceTabs jobs={jobs} />
-          </section>
-        </Reveal>
+        <JobsSection />
 
         <Reveal>
           <section className="content-section" aria-labelledby="projects">

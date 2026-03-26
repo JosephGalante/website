@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import {useState} from 'react'
 
 const headshotLink = '/headshot.jpeg'
 
@@ -30,7 +30,7 @@ export function TiltImage() {
       onMouseMove={handleMove}
       onMouseLeave={reset}
     >
-      <div className="portrait-frame" style={{ transform }}>
+      <div className="portrait-frame" style={{transform}}>
         <Image
           src={headshotLink}
           alt="Joe Galante profile picture"

@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import type { Job } from '@/lib/site-data'
+import {useState} from 'react'
+import type {Job} from '@/lib/site-data'
 
 type ExperienceTabsProps = {
   jobs: Job[]
@@ -50,12 +50,14 @@ function formatDuration(job: Job) {
   }
   const inclusiveMonths =
     (end.year - job.start.year) * 12 + (end.month - job.start.month) + 1
-  const endLabel = job.end ? formatMonthYear(job.end.month, job.end.year) : 'Present'
+  const endLabel = job.end
+    ? formatMonthYear(job.end.month, job.end.year)
+    : 'Present'
 
   return `${formatMonthYear(job.start.month, job.start.year)} - ${endLabel} (${formatElapsedMonths(inclusiveMonths)})`
 }
 
-export function ExperienceTabs({ jobs }: ExperienceTabsProps) {
+export function ExperienceTabs({jobs}: ExperienceTabsProps) {
   const [activeId, setActiveId] = useState(jobs[0]?.id ?? '')
   const activeJob = jobs.find((job) => job.id === activeId) ?? jobs[0]
 
@@ -65,7 +67,11 @@ export function ExperienceTabs({ jobs }: ExperienceTabsProps) {
 
   return (
     <div className="experience-layout">
-      <div className="experience-tablist" role="tablist" aria-label="Experience history">
+      <div
+        className="experience-tablist"
+        role="tablist"
+        aria-label="Experience history"
+      >
         {jobs.map((job) => (
           <button
             key={job.id}
