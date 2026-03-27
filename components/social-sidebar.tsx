@@ -1,11 +1,6 @@
 import type {Social} from '@/lib/site-data'
 import {socials} from '@/lib/site-data'
-import {
-  CodepenIcon,
-  GithubIcon,
-  LinkedinIcon,
-  MailIcon,
-} from '@/components/icons'
+import {GithubIcon, LinkedinIcon, MailIcon} from '@/components/icons'
 import type {ComponentType} from 'react'
 
 type SocialIconProps = {
@@ -20,7 +15,6 @@ const socialIconMap: Record<Social['icon'], SocialIconComponent> = {
   github: GithubIcon,
   linkedin: LinkedinIcon,
   mail: MailIcon,
-  codepen: CodepenIcon,
 }
 
 function SocialIcon({icon}: SocialIconProps) {

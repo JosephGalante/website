@@ -94,14 +94,3 @@ export function MailIcon({className}: IconProps) {
     </svg>
   )
 }
-
-export function CodepenIcon({className}: IconProps) {
-  return (
-    <svg {...baseProps(className)}>
-      <path d="M12 3l8 5v8l-8 5-8-5V8z" />
-      <path d="M12 3v18" />
-      <path d="M4 8l8 5 8-5" />
-      <path d="M4 16l8-5 8 5" />
-    </svg>
-  )
-}

@@ -1,6 +1,7 @@
 'use client'
 
 import type {MouseEvent} from 'react'
+import {useRouter} from 'next/navigation'
 import {ArrowRightUpIcon, FolderIcon, GithubIcon} from '@/components/icons'
 import type {Project} from '@/lib/site-data'
 
@@ -10,9 +11,17 @@ type ProjectCardProps = {
 }
 
 export function ProjectCard({project, delay = 0}: ProjectCardProps) {
-  const primaryLink = project.liveLink ?? project.githubLink
+  const router = useRouter()
+  const primaryLink =
+    project.detailPath ?? project.liveLink ?? project.githubLink
+  const opensInternally = Boolean(project.detailPath)
 
   const openPrimaryLink = () => {
+    if (opensInternally && project.detailPath) {
+      router.push(project.detailPath)
+      return
+    }
+
     window.open(primaryLink, '_blank', 'noopener,noreferrer')
   }
 
@@ -60,7 +69,6 @@ export function ProjectCard({project, delay = 0}: ProjectCardProps) {
           ) : null}
         </div>
       </div>
-
       <h3>{project.title}</h3>
       <p>{project.description}</p>
 
