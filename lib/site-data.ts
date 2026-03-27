@@ -148,15 +148,6 @@ export const jobs: Job[] = [
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Find-A-Coach',
-    description:
-      'A web app with 2-factor authentication that allows users to find coaches based on their location and skill, using Vue.js and Vuex, and is currently hosted on Firebase.',
-    liveLink: 'https://findacoach-ebc23.web.app/coaches',
-    githubLink: 'https://github.com/JosephGalante/FindACoach',
-    skills: [{label: 'Vue.js', color: '#4FC08D'}],
-  },
-  {
-    id: 2,
     title: 'Portfolio Analytics',
     description:
       'A real-time portfolio analytics platform with live valuation updates, holdings management, and an event-driven backend using FastAPI, Redis, PostgreSQL, and Next.js.',
@@ -166,6 +157,19 @@ export const projects: Project[] = [
       {label: 'Next.js', color: '#ffffff'},
       {label: 'FastAPI', color: '#009688'},
       {label: 'Redis', color: '#DC382D'},
+    ],
+  },
+  {
+    id: 2,
+    title: 'Distributed Rate Limiter',
+    description:
+      'A Go-based distributed rate limiting service with Redis token buckets, Postgres-backed policy config, deterministic precedence rules, and a thin React UI for simulation and bucket inspection.',
+    liveLink: 'https://distributed-rate-limiter-web.onrender.com',
+    githubLink: 'https://github.com/JosephGalante/rate_limiter',
+    skills: [
+      {label: 'Go', color: '#00ADD8'},
+      {label: 'Redis', color: '#DC382D'},
+      {label: 'TypeScript', color: '#3178C6'},
     ],
   },
   {
@@ -179,6 +183,15 @@ export const projects: Project[] = [
   },
   {
     id: 4,
+    title: 'Find-A-Coach',
+    description:
+      'A web app with 2-factor authentication that allows users to find coaches based on their location and skill, using Vue.js and Vuex, and is currently hosted on Firebase.',
+    liveLink: 'https://findacoach-ebc23.web.app/coaches',
+    githubLink: 'https://github.com/JosephGalante/FindACoach',
+    skills: [{label: 'Vue.js', color: '#4FC08D'}],
+  },
+  {
+    id: 5,
     title: 'React Chat App',
     description:
       'Created a fully functional chat application using React.js, with a live-chat feature, user authentication, and a back-end to store messages.',
@@ -187,20 +200,12 @@ export const projects: Project[] = [
     skills: [{label: 'React', color: '#61DBFB'}],
   },
   {
-    id: 5,
+    id: 6,
     title: 'YelpCamp',
     description:
       'An extensive web app for users to share their favorite campgrounds, using HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB.',
     githubLink: 'https://github.com/JosephGalante/YelpCamp',
     skills: [{label: 'JavaScript', color: '#F7DF1E'}],
-  },
-  {
-    id: 6,
-    title: 'Wordle',
-    description:
-      "As a daily Wordle player, I created a Wordle clone so that I could play every day without having to wait for the next day's puzzle.",
-    githubLink: 'https://github.com/JosephGalante/wordle',
-    skills: [{label: 'Vue.js', color: '#4FC08D'}],
   },
 ]
 
