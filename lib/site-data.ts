@@ -173,6 +173,19 @@ export const jobs: Job[] = [
 
 export const projects: Project[] = [
   {
+    id: 7,
+    title: 'Feature Flag Platform',
+    description:
+      'A feature flag control plane with an admin dashboard, audit logs, API keys, Redis-backed evaluation projections, and cheap async rebuilds using QStash callbacks instead of a paid worker.',
+    liveLink: 'https://galante-feature-flag.vercel.app',
+    githubLink: 'https://github.com/JosephGalante/feature_flag_platform.git',
+    detailPath: '/projects/feature-flag-platform',
+    skills: [
+      {label: 'Next.js', color: '#ffffff'},
+      {label: 'Fastify', color: '#ffffff'},
+    ],
+  },
+  {
     id: 1,
     title: 'Portfolio Analytics',
     description:
@@ -198,44 +211,71 @@ export const projects: Project[] = [
       {label: 'TypeScript', color: '#3178C6'},
     ],
   },
-  {
-    id: 3,
-    title: 'Pathfinder Visualizer',
-    description:
-      'A web app that visualizes several different pathfinding algorithms demonstrating how each algorithm finds the shortest path in a graph.',
-    liveLink: 'https://pathfinder-neon.vercel.app',
-    githubLink: 'https://github.com/JosephGalante/pathfinder',
-    skills: [{label: 'Vue.js', color: '#4FC08D'}],
-  },
-  {
-    id: 4,
-    title: 'Find-A-Coach',
-    description:
-      'A web app with 2-factor authentication that allows users to find coaches based on their location and skill, using Vue.js and Vuex, and is currently hosted on Firebase.',
-    liveLink: 'https://findacoach-ebc23.web.app/coaches',
-    githubLink: 'https://github.com/JosephGalante/FindACoach',
-    skills: [{label: 'Vue.js', color: '#4FC08D'}],
-  },
-  {
-    id: 5,
-    title: 'React Chat App',
-    description:
-      'Created a fully functional chat application using React.js, with a live-chat feature, user authentication, and a back-end to store messages.',
-    liveLink: 'https://incredible-crisp-4050e0.netlify.app/',
-    githubLink: 'https://github.com/JosephGalante/ChatApp',
-    skills: [{label: 'React', color: '#61DBFB'}],
-  },
-  {
-    id: 6,
-    title: 'YelpCamp',
-    description:
-      'An extensive web app for users to share their favorite campgrounds, using HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB.',
-    githubLink: 'https://github.com/JosephGalante/YelpCamp',
-    skills: [{label: 'JavaScript', color: '#F7DF1E'}],
-  },
 ]
 
 export const projectCaseStudies: ProjectCaseStudy[] = [
+  {
+    slug: 'feature-flag-platform',
+    title: 'Feature Flag Platform',
+    eyebrow: 'Backend Platform / Control Plane Case Study',
+    summary:
+      'I built this project to show backend platform thinking: a typed admin API, Redis-backed evaluation projections, auditability in Postgres, environment-scoped API keys, and an async rebuild path that keeps the hosted demo cheap by swapping a paid worker for QStash callbacks.',
+    detailPath: '/projects/feature-flag-platform',
+    liveLink: 'https://feature-flag-platform-web.vercel.app',
+    githubLink: 'https://github.com/JosephGalante/feature_flag_platform.git',
+    stack: [
+      {label: 'Fastify', color: '#ffffff'},
+      {label: 'TypeScript', color: '#3178C6'},
+      {label: 'Next.js', color: '#ffffff'},
+      {label: 'PostgreSQL', color: '#0064a5'},
+      {label: 'Redis', color: '#DC382D'},
+      {label: 'QStash', color: '#00C98D'},
+      {label: 'Render', color: '#4351E8'},
+      {label: 'Vercel', color: '#ffffff'},
+    ],
+    highlights: [
+      {
+        label: 'Core idea',
+        value: 'Feature flag control plane with projected read models',
+      },
+      {
+        label: 'Async path',
+        value: 'QStash signed callbacks rebuild Redis projections after writes',
+      },
+      {
+        label: 'Deploy tradeoff',
+        value: 'API on Render and web on Vercel without paying for a worker',
+      },
+    ],
+    sections: [
+      {
+        title: 'Why I Built It',
+        paragraphs: [
+          'I wanted a project that looked more like internal platform software than a generic CRUD app. The interesting part is not just storing flags, it is shaping a control plane that supports admin workflows, low-latency evaluation reads, audit history, scoped API keys, and deployment tradeoffs that still make sense on a portfolio budget.',
+          'That led to a split between the write side and the read side: Postgres owns the durable source of truth, while Redis stores projected environment data that evaluation paths can read quickly without reconstructing flag state on every request.',
+        ],
+      },
+      {
+        title: 'Architecture And Runtime Path',
+        paragraphs: [
+          'The admin API accepts writes for flags, configurations, audit logs, and API keys. Evaluation requests read environment projections from Redis so the hot path stays fast and decoupled from the normalized relational model in Postgres.',
+          'Originally this design assumed a dedicated worker process to rebuild projections after writes. For the hosted version, I retrofitted that async path to publish signed QStash jobs that call back into the API and trigger the existing rebuild logic without requiring a paid always-on worker.',
+        ],
+        bullets: [
+          'Postgres is the source of truth for organizations, projects, environments, flags, memberships, API keys, and audit logs.',
+          'Redis stores per-environment projected flag state so evaluation requests stay cheap and predictable.',
+          'QStash now carries the async rebuild trigger, preserving a worker-style architecture while fitting a cheap public deployment.',
+        ],
+      },
+      {
+        title: 'Tradeoffs I Would Call Out In An Interview',
+        paragraphs: [
+          'Using QStash instead of a dedicated worker is an explicit hosting tradeoff, not an accident. It keeps the project deployable on low-cost infrastructure while still demonstrating background processing, idempotent job publication, signed callbacks, and separation between write paths and derived read models.',
+          'I would still call out that a higher-throughput production version could move back to a dedicated worker or queue consumer, tighten internal endpoint exposure, and add a stronger reconciliation story for drift repair. For a portfolio deployment, though, the current shape tells the backend story clearly without hiding the operational constraints.',
+        ],
+      },
+    ],
+  },
   {
     slug: 'portfolio-analytics',
     title: 'Portfolio Analytics',
