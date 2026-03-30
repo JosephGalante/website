@@ -11,28 +11,13 @@ export default function AboutMeSection() {
         <div className="about-layout">
           <div className="about-copy">
             <p>
-              I&apos;m a full-stack software engineer based in Chicago,
-              currently building financial software with a strong emphasis on
-              backend systems, product ownership, and shipping features that
-              hold up under real usage. I do my best work in environments where
-              I can be thoughtful, collaborative, and close to both product
-              decisions and implementation details.
+              I&apos;m a full-stack software engineer based in Chicago, passionate about building robust, impactful products and delivering value through thoughtful engineering.
             </p>
             <p>
-              Most recently, I&apos;ve been working on portfolio and trading
-              workflows at Canopy Capital, designing and delivering features
-              across Django APIs and Next.js clients. My work has included
-              authorization systems, asynchronous event pipelines, internal
-              operations tooling, and performance improvements for high-traffic
-              data-heavy workflows.
+              Currently at Canopy Capital, I work on financial platforms—designing features, shipping code across the stack, and collaborating closely with product teams. I focus on code quality, reliability, and shipping tools users love.
             </p>
             <p>
-              Before that, I worked on software for autonomous vehicle safety at
-              Edge Case Research, where I built across Golang, Python, and
-              frontend systems in a domain where reliability and correctness
-              mattered. That combination of finance, platform thinking, and
-              real-world systems constraints is a big part of how I approach
-              engineering today.
+              I enjoy tackling complex problems, from scaling backend APIs to optimizing end-to-end workflows, and I care deeply about maintainable code, observability, and system design.
             </p>
             <p>
               I graduated from the{' '}
