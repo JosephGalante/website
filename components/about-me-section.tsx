@@ -11,13 +11,20 @@ export default function AboutMeSection() {
         <div className="about-layout">
           <div className="about-copy">
             <p>
-              I&apos;m a full-stack software engineer based in Chicago, passionate about building robust, impactful products and delivering value through thoughtful engineering.
+              I&apos;m a full-stack software engineer based in Chicago,
+              passionate about building robust, impactful products and
+              delivering value through thoughtful engineering.
             </p>
             <p>
-              Currently at Canopy Capital, I work on financial platforms—designing features, shipping code across the stack, and collaborating closely with product teams. I focus on code quality, reliability, and shipping tools users love.
+              Currently at Canopy Capital, I work on financial
+              platforms—designing features, shipping code across the stack, and
+              collaborating closely with product teams. I focus on code quality,
+              reliability, and shipping tools users love.
             </p>
             <p>
-              I enjoy tackling complex problems, from scaling backend APIs to optimizing end-to-end workflows, and I care deeply about maintainable code, observability, and system design.
+              I enjoy tackling complex problems, from scaling backend APIs to
+              optimizing end-to-end workflows, and I care deeply about
+              maintainable code, observability, and system design.
             </p>
             <p>
               I graduated from the{' '}

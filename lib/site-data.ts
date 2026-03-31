@@ -204,7 +204,8 @@ export const projects: Project[] = [
     description:
       'A live multi-user collaborative dashboard builder with drag-and-drop widgets, autosaved persistence, and best-effort realtime presence using Fastify WebSockets and Postgres.',
     liveLink: 'https://collaborative-dashboard-builder.vercel.app/',
-    githubLink: 'https://github.com/JosephGalante/collaborative_dashboard_builder',
+    githubLink:
+      'https://github.com/JosephGalante/collaborative_dashboard_builder',
     detailPath: '/projects/collaborative-dashboard-builder',
     skills: [
       {label: 'React', color: '#61DAFB'},
@@ -416,10 +417,11 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
     title: 'Collaborative Dashboard Builder',
     eyebrow: 'Realtime Product UX / Full-Stack Case Study',
     summary:
-      'I built this project to show product-minded full-stack engineering: a drag-and-drop dashboard canvas, autosaved backend persistence, and lightweight realtime collaboration with presence, cursors, and selected-widget signals without turning the project into a CRDT research exercise.',
+      'I built this project to show product-minded full-stack engineering: a drag-and-drop dashboard canvas, autosaved backend persistence, and lightweight realtime collaboration with presence, cursors, selected-widget signals, and safe deferred remote updates without turning the project into a CRDT research exercise.',
     detailPath: '/projects/collaborative-dashboard-builder',
     liveLink: 'https://collaborative-dashboard-builder.vercel.app/',
-    githubLink: 'https://github.com/JosephGalante/collaborative_dashboard_builder',
+    githubLink:
+      'https://github.com/JosephGalante/collaborative_dashboard_builder',
     stack: [
       {label: 'React', color: '#61DAFB'},
       {label: 'TypeScript', color: '#3178C6'},
@@ -433,7 +435,8 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
     highlights: [
       {
         label: 'Core idea',
-        value: 'Collaborative dashboard builder with best-effort realtime presence',
+        value:
+          'Collaborative dashboard builder with best-effort realtime presence',
       },
       {
         label: 'Persistence model',
@@ -441,7 +444,8 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
       },
       {
         label: 'Realtime tradeoff',
-        value: 'Presence and signals instead of full CRDT sync',
+        value:
+          'Presence, signals, and deferred remote refresh instead of full CRDT sync',
       },
     ],
     sections: [
@@ -449,14 +453,14 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
         title: 'Why I Built It',
         paragraphs: [
           'I wanted a project that looked more like an actual product surface than a generic admin panel. The interesting part was combining UI-heavy interaction design, persistence, and lightweight collaboration in a way that still felt finishable and presentable.',
-          'Instead of trying to solve perfect multiplayer editing, I scoped the collaboration model around what matters most for a portfolio demo: connected-user awareness, live cursors, remote selection cues, and dashboard persistence that survives refreshes and shareable URLs.',
+          'Instead of trying to solve perfect multiplayer editing, I scoped the collaboration model around what matters most for a portfolio demo: connected-user awareness, live cursors, remote selection cues, dashboard persistence that survives refreshes and shareable URLs, and a safe defer model when remote changes arrive during local unsaved edits.',
         ],
       },
       {
         title: 'Architecture And Interaction Model',
         paragraphs: [
           'The frontend owns fast interaction state like selected widgets, panel state, drag operations, and local editing flows. Persisted dashboard state travels through a Fastify API into Postgres as JSON documents so the API stays simple and the UI can evolve quickly.',
-          'For realtime behavior, a websocket room per dashboard tracks connected users, cursors, and selected-widget signals. That gives the app collaborative feel without needing operation-level document merge logic.',
+          'For realtime behavior, a websocket room per dashboard tracks connected users, cursors, selected-widget signals, and remote-save notifications. Clean tabs refresh automatically, while dirty tabs defer the incoming update behind an explicit reload prompt.',
         ],
         bullets: [
           'Zustand handles local dashboard and presence state while TanStack Query handles server fetch and autosave flows.',
@@ -467,7 +471,7 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
       {
         title: 'Tradeoffs I Would Call Out In An Interview',
         paragraphs: [
-          'This is intentionally not Google Docs for dashboards. I chose last-write-wins persistence and presence-style collaboration because that let me finish a polished end-to-end product without disappearing into CRDT complexity.',
+          'This is intentionally not Google Docs for dashboards. I chose last-write-wins persistence, presence-style collaboration, and a conservative safe defer flow for remote updates because that let me finish a polished end-to-end product without disappearing into CRDT complexity.',
           'That tradeoff is the point, not a weakness I would hide. It shows that I can scope a product deliberately, choose where realtime actually matters, and still ship something that feels collaborative and portfolio-ready on low-cost infrastructure like Vercel, Render, and Neon.',
         ],
       },
